@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="glenn">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Glenn Richard Bech              
+                </h3>
+                <a data-role="button" data-rel="reverse" data-transition="slide" href="#speakers" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <p>
+              <img src="images/glenn.jpg"><br />
+              <br />Glenn Richard Bech's presentation:<br /> <a href="su_tackand.html">Tackling Android fragmentation</a><br />
+              <br />Glenn Bech manages the Inmeta Consulting Java team and works hands-on in software development projects. He has developed software on the Java platform , mainly server side. for the Banking and insurance industry for the last ten years. For Glenn, as for many a developer, it all started 20 years ago with “Poke 53281,0″ on the Commodore 64. Since then, he has programmed a wide range of languages. The first of his now several Android applications was published on the Android market in february 2011. He saw the fun and potential in tablet devices and was quick to embrace Honeycomb. He is now a very passionate Android developer. Glenn is the co-founder of the Norwegian software comminity <a href="http://www.baksia.org/">Baksia</a> that is non-profit and promotes everything scalable and backend related.
+              </p>
+            </div>
+            </div>
+
+</body>
+</html>

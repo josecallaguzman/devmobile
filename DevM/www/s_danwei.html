@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="danwei">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Danwei Tran Luciani            
+                </h3>
+                <a data-role="button" data-rel="reverse" data-transition="slide" href="#speakers" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">     
+            <p>
+            <img src="images/danwei.jpg"><br />
+            <br />Danwei Tran Luciani's presentation:<br /> <a href="su_mdesign.html">Skapa snygga appar i Metro design</a><br />
+            <br />Danwei Tran Luciani är teknisk evangelist på Microsoft. Hennes nuvarande fokusområden är Metro-design, HTML5 och nästa version av Windows. Hon gillar att samla Xbox achievements, att geocacha, och är svag för kaniner. Följ hennes tweets på <a href="http://twitter.com/danweitran">@danweitran</a>
+            
+            </p>   
+              
+            </div>
+            </div>
+
+</body>
+</html>

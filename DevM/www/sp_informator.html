@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="informator">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Informator     
+                </h3>
+                <a data-role="button" data-rel="reverse" data-transition="slide" href="#speakers" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.informator.se"><img src="images/informator.gif"></a><br />
+              	<br />Rätt använda IT-lösningar automatiserar rutinmässiga arbetsuppgifter och minskar arbetsbördan och risken för fel. Det ger minskade kostnader och ökande effektivitetsvinster.<br />
+ 				<br />Men många organisationer utnyttjar bara en bråkdel av kraften i sina IT-lösningar. För att frigöra de stora möjligheter som dagens system och applikationer medför, behövs kunskap och kompetens.<br />
+ 				<br /><h2>Affärsorienterad kompetensutveckling</h2>
+				<br />Informator arbetar med kunskapsöverföring som hjälper organisationer och individer att utveckla rätt kompetens. Vi ser det som en del av våra kunders verksamhets- och affärsutveckling. Syftet med ny kunskap är att organisationen ska fungera bättre. Det åstadkommer vi genom att utbilda en individ i taget.<br />
+ 				<br />När en individ utvecklas, får han/hon ut mer av sitt arbete och företaget får ut mer av varje medarbetare. Det leder till ökad lönsamhet, vilket ger utrymme för ännu mer utveckling.<br />
+ 				<br />Den här goda cirkeln börjar med kunskap. Att koppla kunskapsöverföring och kompetensutveckling till affärsnytta är därför en viktig del av vårt sätt att arbeta.<br />
+ 				<br />Utifrån ett affärsperspektiv analyserar vi nuvarande och framtida kunskapsbehov. Vi rekommenderar vilka utbildningsinsatser som behövs. Efter genomförd utbildning gör vi uppföljningar som säkerställer att kunskapsmålen är uppnådda<br />
+              
+            </div>
+            </div>
+
+</body>
+</html>

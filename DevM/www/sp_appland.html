@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="appland">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Appland        
+                </h3>
+                <a data-role="button" data-rel="reverse" data-transition="slide" href="#speakers" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.appland.se/"><img src="images/appland.png"></a><br />
+              <br /><h2>Marknadsplats för Svenska Android-appar</h2><br />
+ 				<br />Alla appar är kvalitetskontrollerade så du kan känna dig trygg när du laddar ner den till din telefon. Appland innehåller både gratis- och betalappar. Väljer du att köpa en app så läggs kostnaden på din mobilräkning eller dras från ditt kontantkort, du behöver alltså inte registrera dig eller använda kreditkort. För att kunna ladda ner gratis- eller betalappar måste du först installera Appland i din smartphone.<br />
+              
+            </div>
+            </div>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0.1.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0.1.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">	
+	  <div data-role="page" id="home">
+            <div data-theme="a" data-role="header">
+               <h1>
+               DevMobile
+               </h1>
+                         
+            </div>
+            <div data-role="content">
+                <a data-role="button" data-transition="slide" data-theme="a" href="#agenda" data-icon="arrow-r" data-iconpos="right">
+                    Agenda
+                </a>
+                <a data-role="button" data-transition="slide" data-theme="a" href="#speakers" data-icon="arrow-r" data-iconpos="right">
+                    Speakers
+                </a>
+                <a data-role="button" data-transition="slide" data-theme="a" href="#subjects" data-icon="arrow-r" data-iconpos="right">
+                    Subjects
+                </a>
+                <a data-role="button" data-transition="slide" data-theme="a" href="#sponsors" data-icon="arrow-r" data-iconpos="right">
+                    Sponsors
+                </a>
+                <a data-role="button" data-transition="slide" data-theme="a" href="#contributors" data-icon="arrow-r" data-iconpos="right">
+                    Contributors
+                </a>
+                <a data-role="button" data-transition="slide" data-theme="a" href="#myagenda" data-icon="arrow-r" data-iconpos="right">
+                    MyAgenda
+                </a>
+            </div>
+            <div data-role="footer">
+            	<a href="http://devmobile.se/"><img src="images/devmobile.jpg"></img></a>
+            </div>
+        </div>	
+        	
+        <div data-role="page" id="agenda">
+            <div data-theme="a" data-role="header" >
+                <h1>
+                    Agenda
+                </h1>
+                <a href="index.html" rel="external" data-rel="reverse" data-role="button" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+            </div>
+            <div data-role="content">        
+              
+            </div>
+        </div>
+        
+        <div data-role="page" id="speakers">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h1>
+                    Speakers
+                </h1>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+            </div>            
+            <div data-role="controlgroup" data-divider-theme="a" >
+                    <a href="s_mihai.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Mihai Corlan</a>
+                    <a href="s_patrik.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Patrik Malmquist</a>
+                    <a href="s_dag.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right" >Dag König</a>
+                    <a href="s_danwei.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Danwei Tran Luciani</a>
+                    <a href="s_par.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Pär Sikö</a>
+                    <a href="s_martin.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Martin Gunnarsson</a>
+                    <a href="s_johan.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Johan Sanneblad</a>
+                    <a href="s_glenn.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Glenn Richard Bech</a>
+                    
+            </div>     
+         </div>
+         
+         <div data-role="page" id="subjects">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h1>
+                    Subjects
+                </h1>
+                <a data-role="button" rel="external" data-transition="slide" href="index.html" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+            </div>            
+            <div data-role="controlgroup" data-divider-theme="a" >
+                    <a href="su_phonegap.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Getting started with PhoneGap</a>
+                    <a href="su_mapp.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Mobile App vs Mobile Site</a>
+                    <a href="su_tba.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Dag König TBA</a>
+                    <a href="su_mdesign.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Skapa snygga appar i Metro design</a>
+                    <a href="su_amashups.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Fun with Android mashups</a>
+                    <a href="su_gamedev.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Game Development with Unity for Mobile Devices</a>
+                    <a href="su_tackand.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Tackling Android fragmentation</a>
+                    
+                    
+            </div>     
+         </div>
+         
+         <div data-role="page" id="sponsors">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h1>
+                    Sponsors
+                </h1>
+                <a href="index.html" rel="external" data-rel="reverse" data-role="button" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+            </div>
+            <div data-role="content">        
+            	<div data-role="controlgroup" data-divider-theme="a" >
+            		<a href="sp_microsoft.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Microsoft</a>
+            		<a href="sp_informator.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Informator</a>
+            		<a href="sp_appland.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Appland</a>
+            		<a href="sp_nokia.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Nokia</a>
+            	</div>  
+            </div>
+        </div>   
+        
+        <div data-role="page" id="contributors">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h1>
+                    Contributors
+                </h1>
+                <a href="index.html" rel="external" data-rel="reverse" data-role="button" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+            </div>
+            <div data-role="content">        
+              <div data-role="controlgroup" data-divider-theme="a" >
+            		<a href="co_squeed.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Squeed</a>
+            		<a href="co_javaforum.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Javaforum.se</a>
+            		<a href="co_nforum.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">nforum.se</a>
+            		<a href="co_cocoa.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">CocoaHeads Göteborg</a>
+            		<a href="co_gomobile.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">go mobile</a>
+            	</div>
+            </div>
+        </div>  
+          
+        <div data-role="page" id="myagenda">
+            <div data-theme="a" data-role="header" >
+                <h1>
+                    MyAgenda
+                </h1>
+                <a href="index.html" rel="external" data-rel="reverse" data-role="button" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+            </div>
+            <div data-role="content">        
+              
+            </div>
+        </div>
+        
+  </body>
+
+</html>

@@ -27,8 +27,6 @@
 		A70C24121520B23000B802C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70C24101520B23000B802C8 /* Localizable.strings */; };
 		A70C24161520B23000B802C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70C24141520B23000B802C8 /* Localizable.strings */; };
 		A70C241A1520B23000B802C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70C24181520B23000B802C8 /* Localizable.strings */; };
-		A70C24241520B23000B802C8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C24231520B23000B802C8 /* Default.png */; };
-		A70C24261520B23000B802C8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C24251520B23000B802C8 /* Default@2x.png */; };
 		A70C24281520B23000B802C8 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A70C24271520B23000B802C8 /* Capture.bundle */; };
 		A70C242A1520B23100B802C8 /* Cordova.plist in Resources */ = {isa = PBXBuildFile; fileRef = A70C24291520B23100B802C8 /* Cordova.plist */; };
 		A70C242E1520B23100B802C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A70C242D1520B23100B802C8 /* AppDelegate.m */; };
@@ -36,6 +34,8 @@
 		A70C24331520B23100B802C8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70C24321520B23100B802C8 /* MainViewController.xib */; };
 		A70C24371520B23100B802C8 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = A70C24361520B23100B802C8 /* verify.sh */; };
 		A70C24401520B92500B802C8 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A70C243F1520B92500B802C8 /* www */; };
+		A7596705152234A300671673 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A7596703152234A300671673 /* Default.png */; };
+		A7596706152234A300671673 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7596704152234A300671673 /* Default@2x.png */; };
 		A7B522E815210675003772A5 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B522E515210675003772A5 /* icon-72.png */; };
 		A7B522E915210675003772A5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B522E615210675003772A5 /* icon.png */; };
 		A7B522EA15210675003772A5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B522E715210675003772A5 /* icon@2x.png */; };
@@ -65,8 +65,6 @@
 		A70C24111520B23000B802C8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A70C24151520B23000B802C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A70C24191520B23000B802C8 /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Resources/se.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A70C24231520B23000B802C8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
-		A70C24251520B23000B802C8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		A70C24271520B23000B802C8 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
 		A70C24291520B23100B802C8 /* Cordova.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Cordova.plist; sourceTree = "<group>"; };
 		A70C242C1520B23100B802C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
@@ -77,6 +75,8 @@
 		A70C24351520B23100B802C8 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A70C24361520B23100B802C8 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		A70C243F1520B92500B802C8 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		A7596703152234A300671673 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A7596704152234A300671673 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A7B522E515210675003772A5 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "new icons/icon-72.png"; sourceTree = "<group>"; };
 		A7B522E615210675003772A5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "new icons/icon.png"; sourceTree = "<group>"; };
 		A7B522E715210675003772A5 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "new icons/icon@2x.png"; sourceTree = "<group>"; };
@@ -237,8 +237,8 @@
 		A70C24221520B23000B802C8 /* splash */ = {
 			isa = PBXGroup;
 			children = (
-				A70C24231520B23000B802C8 /* Default.png */,
-				A70C24251520B23000B802C8 /* Default@2x.png */,
+				A7596703152234A300671673 /* Default.png */,
+				A7596704152234A300671673 /* Default@2x.png */,
 			);
 			name = splash;
 			sourceTree = "<group>";
@@ -324,8 +324,6 @@
 				A70C24121520B23000B802C8 /* Localizable.strings in Resources */,
 				A70C24161520B23000B802C8 /* Localizable.strings in Resources */,
 				A70C241A1520B23000B802C8 /* Localizable.strings in Resources */,
-				A70C24241520B23000B802C8 /* Default.png in Resources */,
-				A70C24261520B23000B802C8 /* Default@2x.png in Resources */,
 				A70C24281520B23000B802C8 /* Capture.bundle in Resources */,
 				A70C242A1520B23100B802C8 /* Cordova.plist in Resources */,
 				A70C24331520B23100B802C8 /* MainViewController.xib in Resources */,
@@ -334,6 +332,8 @@
 				A7B522E815210675003772A5 /* icon-72.png in Resources */,
 				A7B522E915210675003772A5 /* icon.png in Resources */,
 				A7B522EA15210675003772A5 /* icon@2x.png in Resources */,
+				A7596705152234A300671673 /* Default.png in Resources */,
+				A7596706152234A300671673 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

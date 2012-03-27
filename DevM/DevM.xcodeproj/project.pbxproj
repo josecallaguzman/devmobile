@@ -27,9 +27,6 @@
 		A70C24121520B23000B802C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70C24101520B23000B802C8 /* Localizable.strings */; };
 		A70C24161520B23000B802C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70C24141520B23000B802C8 /* Localizable.strings */; };
 		A70C241A1520B23000B802C8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A70C24181520B23000B802C8 /* Localizable.strings */; };
-		A70C241D1520B23000B802C8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C241C1520B23000B802C8 /* icon.png */; };
-		A70C241F1520B23000B802C8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C241E1520B23000B802C8 /* icon@2x.png */; };
-		A70C24211520B23000B802C8 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C24201520B23000B802C8 /* icon-72.png */; };
 		A70C24241520B23000B802C8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C24231520B23000B802C8 /* Default.png */; };
 		A70C24261520B23000B802C8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A70C24251520B23000B802C8 /* Default@2x.png */; };
 		A70C24281520B23000B802C8 /* Capture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A70C24271520B23000B802C8 /* Capture.bundle */; };
@@ -39,6 +36,9 @@
 		A70C24331520B23100B802C8 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A70C24321520B23100B802C8 /* MainViewController.xib */; };
 		A70C24371520B23100B802C8 /* verify.sh in Resources */ = {isa = PBXBuildFile; fileRef = A70C24361520B23100B802C8 /* verify.sh */; };
 		A70C24401520B92500B802C8 /* www in Resources */ = {isa = PBXBuildFile; fileRef = A70C243F1520B92500B802C8 /* www */; };
+		A7B522E815210675003772A5 /* icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B522E515210675003772A5 /* icon-72.png */; };
+		A7B522E915210675003772A5 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B522E615210675003772A5 /* icon.png */; };
+		A7B522EA15210675003772A5 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A7B522E715210675003772A5 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,9 +65,6 @@
 		A70C24111520B23000B802C8 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = Resources/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A70C24151520B23000B802C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = Resources/de.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A70C24191520B23000B802C8 /* se */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = se; path = Resources/se.lproj/Localizable.strings; sourceTree = "<group>"; };
-		A70C241C1520B23000B802C8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = Resources/icons/icon.png; sourceTree = "<group>"; };
-		A70C241E1520B23000B802C8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "Resources/icons/icon@2x.png"; sourceTree = "<group>"; };
-		A70C24201520B23000B802C8 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "Resources/icons/icon-72.png"; sourceTree = "<group>"; };
 		A70C24231520B23000B802C8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/splash/Default.png; sourceTree = "<group>"; };
 		A70C24251520B23000B802C8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/splash/Default@2x.png"; sourceTree = "<group>"; };
 		A70C24271520B23000B802C8 /* Capture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Capture.bundle; path = Resources/Capture.bundle; sourceTree = "<group>"; };
@@ -80,6 +77,9 @@
 		A70C24351520B23100B802C8 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; name = README; path = Plugins/README; sourceTree = "<group>"; };
 		A70C24361520B23100B802C8 /* verify.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = verify.sh; sourceTree = "<group>"; };
 		A70C243F1520B92500B802C8 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		A7B522E515210675003772A5 /* icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-72.png"; path = "new icons/icon-72.png"; sourceTree = "<group>"; };
+		A7B522E615210675003772A5 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = "new icons/icon.png"; sourceTree = "<group>"; };
+		A7B522E715210675003772A5 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "new icons/icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,9 +227,9 @@
 		A70C241B1520B23000B802C8 /* icons */ = {
 			isa = PBXGroup;
 			children = (
-				A70C241C1520B23000B802C8 /* icon.png */,
-				A70C241E1520B23000B802C8 /* icon@2x.png */,
-				A70C24201520B23000B802C8 /* icon-72.png */,
+				A7B522E515210675003772A5 /* icon-72.png */,
+				A7B522E615210675003772A5 /* icon.png */,
+				A7B522E715210675003772A5 /* icon@2x.png */,
 			);
 			name = icons;
 			sourceTree = "<group>";
@@ -324,9 +324,6 @@
 				A70C24121520B23000B802C8 /* Localizable.strings in Resources */,
 				A70C24161520B23000B802C8 /* Localizable.strings in Resources */,
 				A70C241A1520B23000B802C8 /* Localizable.strings in Resources */,
-				A70C241D1520B23000B802C8 /* icon.png in Resources */,
-				A70C241F1520B23000B802C8 /* icon@2x.png in Resources */,
-				A70C24211520B23000B802C8 /* icon-72.png in Resources */,
 				A70C24241520B23000B802C8 /* Default.png in Resources */,
 				A70C24261520B23000B802C8 /* Default@2x.png in Resources */,
 				A70C24281520B23000B802C8 /* Capture.bundle in Resources */,
@@ -334,6 +331,9 @@
 				A70C24331520B23100B802C8 /* MainViewController.xib in Resources */,
 				A70C24371520B23100B802C8 /* verify.sh in Resources */,
 				A70C24401520B92500B802C8 /* www in Resources */,
+				A7B522E815210675003772A5 /* icon-72.png in Resources */,
+				A7B522E915210675003772A5 /* icon.png in Resources */,
+				A7B522EA15210675003772A5 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +437,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -457,6 +458,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_THUMB_SUPPORT = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -480,6 +482,7 @@
 					"DEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "DevM/DevM-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -510,6 +513,7 @@
 					"NDEBUG=1,",
 					"CORDOVA_FRAMEWORK=1",
 				);
+				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "DevM/DevM-Info.plist";
 				OTHER_LDFLAGS = (
 					"-weak_framework",
@@ -547,6 +551,7 @@
 				A70C243C1520B23100B802C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

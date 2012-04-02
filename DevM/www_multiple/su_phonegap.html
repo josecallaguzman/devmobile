@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="phonegap">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Getting started with Phonegap       
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">   
+            <p>
+            Presentation speaker: <br /><a href="s_mihai.html">Mihai Corlan</a><br />
+			<br />PhoneGap is the open source platform for developing mobile applications that run across different devices and operating systems. If this is not cool enough then let me add one more thing: you code using JavaScript, HTML, and CSS.<br />
+ 			<br />In this session you will find out what PhoneGap is and how you can use it to build mobile applications.<br />
+			</p>     
+              
+            </div>
+            </div>
+
+</body>
+</html>

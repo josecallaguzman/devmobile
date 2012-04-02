@@ -4,48 +4,34 @@
 <html >
 
   <head>
-    <title>PhoneGap</title>
-    <meta charset="utf-8" />
-    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-       
-  
     
-  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
-  
-  
-   
+    <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no" charset="utf-8"/>
+    
+    
+    <title>PhoneGap</title>
+        
+  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" type="text/css" media="screen" title="no title"/>   
  
-  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
-  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
-  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
-  
-  <!--<script type="text/javascript" charset="utf-8">
-		 function onLoad(){
+  	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+  	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+  	<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  	<script type="text/javascript" charset="utf-8" src="devMobile.js"></script>
 
-          document.addEventListener("deviceready", onDeviceReady, true);
-			
-			}
-	</script>
-   -->
-	<script type="text/javascript" charset="utf-8">
-    $(document).bind("mobileinit", function() {
-    	$.mobile.allowCrossDomainPages = true;
-    	$.support.cors = true;
-      
-    });
-  </script>					
+  
+  
+				
 
     
  
    
  </head>  
-  <body >
-      <!--onload="onLoad()">	-->
+  <body >	
+  
+  <!--home---------------------------------------------------------->
 	  <div data-role="page" id="home">
             <div data-theme="a" data-role="header">
                <h1>
-                   dev:Mobile
+               dev:Mobile
                </h1>
                          
             </div>
@@ -69,122 +55,977 @@
                     MyAgenda
                 </a>
             </div>
-            <div data-role="footer">
-            	<center><a href="http://devmobile.se/"><img src="images/devmobile.jpg"></img></a></center>
+            <div data-role="footer" style="text-align:center">
+            	<a href="http://devmobile.se/"><img src="images/devmobile.jpg" alt="devmob"/></a>
             </div>
         </div>	
-        	
+  
+  <!--agenda---------------------------------------------------------->          
         <div data-role="page" id="agenda">
             <div data-theme="a" data-role="header" >
                 <h1>
                     Agenda
                 </h1>
-                <a rel="external" data-rel="back" data-role="button" data-icon="back" data-iconpos="left">
+                <a href="#home" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="left">
                     Back
                 </a>
+                <a href="#myagenda" data-role="button" data-icon="grid" data-iconpos="right">
+                    MyAgenda
+                </a>
             </div>
-            <div data-role="content">        
-              
+            <div data-role="content">
+            <div class="ui-grid-d">
+                    <!-- ROW 0----------------------------------------------- -->          	
+                    <div class="ui-block-a" >
+                        <div class="ui-bar ui-bar-d" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-b" >
+                        <div class="ui-bar ui-bar-d" style="height:50px"><h4>Android</h4></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><h4>iOS</h4></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><h4>Windows Phone</h4></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><h4>Cross Platform</h4></div>
+                    </div>
+                    <!-- ROW 1----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">13.00-14.00</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px">KEYNOTE</div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px">KEYNOTE</div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px">KEYNOTE</div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px">KEYNOTE</div>
+                    </div>
+                    <!-- ROW 2----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">14.10-15.00</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><a href="#dialog" data-rel="dialog" id="SESSION 1-A">SESSION 1</a></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 1-iOS">SESSION 1</a></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 1-WP">SESSION 1</a></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 1-CP">SESSION 1</a></div>
+                    </div>
+                    <!-- ROW 3----------------------------------------------- -->			
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a" style="height:50px">Break</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <!-- ROW 4----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">15.30-16.20</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 2-A">SESSION 2</a></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 2-iOS">SESSION 2</a></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 2-WP">SESSION 2</a></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 2-CP">SESSION 2</a></div>
+                    </div>
+                    <!-- ROW 5----------------------------------------------- -->
+                    
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">16.30-17.20</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 3-A">SESSION 3</a></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 3-iOS">SESSION 3</a></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 3-WP">SESSION 3</a></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 3-CP">SESSION 3</a></div>
+                    </div>
+                    <!-- ROW 6----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a" style="height:50px">Break</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-a" style="height:50px"></div>
+                    </div>
+                    <!-- ROW 7----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">17.50-18.40</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 4-A">SESSION 4</a></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 4-iOS">SESSION 4</a></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 4-WP">SESSION 4</a></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 4-CP">SESSION 4</a></div>
+                    </div>
+                    <!-- ROW 8----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">18.50-19.40</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 5-A">SESSION 5</a></div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 5-iOS">SESSION 5</a></div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 5-WP">SESSION 5</a></div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 5-CP">SESSION 5</a></div>
+                    </div>
+                    <!-- ROW 9----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-b" style="height:50px">19.40-21.00</div>
+                    </div>
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-b" style="height:50px">PARTY @ EXHIBITION</div>
+                    </div>
+                    <div class="ui-block-c">
+                        <div class="ui-bar ui-bar-b" style="height:50px">PARTY @ EXHIBITION</div>
+                    </div>
+                    <div class="ui-block-d">
+                        <div class="ui-bar ui-bar-b" style="height:50px">PARTY @ EXHIBITION</div>
+                    </div>
+                    <div class="ui-block-e">
+                        <div class="ui-bar ui-bar-b" style="height:50px">PARTY @ EXHIBITION</div>
+                    </div>
+               </div> 
             </div>
         </div>
-        
+ 
+ <!--speakers---------------------------------------------------------->       
         <div data-role="page" id="speakers">
             <div data-theme="a" data-role="header" data-position="fixed">
                 <h1>
                     Speakers
                 </h1>
-                <a data-role="button" rel="external" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
             </div>            
             <div data-role="controlgroup" data-divider-theme="a" >
-                    <a href="s_mihai.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Mihai Corlan</a>
-                    <a href="s_patrik.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Patrik Malmquist</a>
-                    <a href="s_dag.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right" >Dag König</a>
-                    <a href="s_danwei.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Danwei Tran Luciani</a>
-                    <a href="s_par.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Pär Sikö</a>
-                    <a href="s_martin.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Martin Gunnarsson</a>
-                    <a href="s_johan.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Johan Sanneblad</a>
-                    <a href="s_glenn.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Glenn Richard Bech</a>
+                    <a href="#mihai" data-role="button" data-icon="arrow-r" data-iconpos="right">Mihai Corlan</a>
+                    <a href="#patrik" data-role="button" data-icon="arrow-r" data-iconpos="right">Patrik Malmquist</a>
+                    <a href="#dag" data-role="button" data-icon="arrow-r" data-iconpos="right" >Dag König</a>
+                    <a href="#danwei" data-role="button" data-icon="arrow-r" data-iconpos="right">Danwei Tran Luciani</a>
+                    <a href="#par" data-role="button" data-icon="arrow-r" data-iconpos="right">Pär Sikö</a>
+                    <a href="#martin" data-role="button" data-icon="arrow-r" data-iconpos="right">Martin Gunnarsson</a>
+                    <a href="#johan" data-role="button" data-icon="arrow-r" data-iconpos="right">Johan Sanneblad</a>
+                    <a href="#glenn" data-role="button" data-icon="arrow-r" data-iconpos="right">Glenn Richard Bech</a>
                     
             </div>     
          </div>
-         
+   
+   <!--subjects---------------------------------------------------------->      
          <div data-role="page" id="subjects">
             <div data-theme="a" data-role="header" data-position="fixed">
                 <h1>
                     Subjects
                 </h1>
-                <a data-role="button" data-rel="back" rel="external" data-transition="slide" data-icon="back" data-iconpos="left">
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
             </div>            
             <div data-role="controlgroup" data-divider-theme="a" >
-                    <a href="su_phonegap.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Getting started with PhoneGap</a>
-                    <a href="su_mapp.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Mobile App vs Mobile Site</a>
-                    <a href="su_tba.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Dag König TBA</a>
-                    <a href="su_mdesign.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Skapa snygga appar i Metro design</a>
-                    <a href="su_amashups.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Fun with Android mashups</a>
-                    <a href="su_gamedev.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Game Development with Unity for Mobile Devices</a>
-                    <a href="su_tackand.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Tackling Android fragmentation</a>
+                    <a href="#phonegap" data-role="button" data-icon="arrow-r" data-iconpos="right">Getting started with PhoneGap</a>
+                    <a href="#mapp" data-role="button" data-icon="arrow-r" data-iconpos="right">Mobile App vs Mobile Site</a>
+                    <a href="#tba" data-role="button" data-icon="arrow-r" data-iconpos="right">Dag König TBA</a>
+                    <a href="#mdesign" data-role="button" data-icon="arrow-r" data-iconpos="right">Skapa snygga appar i Metro design</a>
+                    <a href="#amashups" data-role="button" data-icon="arrow-r" data-iconpos="right">Fun with Android mashups</a>
+                    <a href="#gamedev" data-role="button" data-icon="arrow-r" data-iconpos="right">Game Development with Unity for Mobile Devices</a>
+                    <a href="#tackand" data-role="button" data-icon="arrow-r" data-iconpos="right">Tackling Android fragmentation</a>
                     
                     
             </div>     
          </div>
-         
+  
+  <!--sponsors---------------------------------------------------------->       
          <div data-role="page" id="sponsors">
             <div data-theme="a" data-role="header" data-position="fixed">
                 <h1>
                     Sponsors
                 </h1>
-                <a rel="external" data-rel="back" data-role="button" data-icon="back" data-iconpos="left">
+                <a  data-rel="back" data-role="button" data-icon="back" data-iconpos="left">
                     Back
                 </a>
             </div>
             <div data-role="content">        
             	<div data-role="controlgroup" data-divider-theme="a" >
-            		<a href="sp_microsoft.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Microsoft</a>
-            		<a href="sp_informator.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Informator</a>
-            		<a href="sp_appland.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Appland</a>
-            		<a href="sp_nokia.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Nokia</a>
+            		<a href="#microsoft" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_microsoft.jpg" alt="microsoft" /></a>
+            		<a href="#informator" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_informator.gif" alt="informator" /></a>
+            		<a href="#appland" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_appland.png" alt="appland" /></a>
+            		<a href="#nokia" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_nokia.png" alt="nokia" /></a>
             	</div>  
             </div>
         </div>   
-        
+ 
+ <!--contributors---------------------------------------------------------->       
         <div data-role="page" id="contributors">
             <div data-theme="a" data-role="header" data-position="fixed">
                 <h1>
                     Contributors
                 </h1>
-                <a rel="external" data-rel="back" data-role="button" data-icon="back" data-iconpos="left">
+                <a data-rel="back" data-role="button" data-icon="back" data-iconpos="left">
                     Back
                 </a>
             </div>
             <div data-role="content">        
               <div data-role="controlgroup" data-divider-theme="a" >
-            		<a href="co_squeed.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Squeed</a>
-            		<a href="co_javaforum.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">Javaforum.se</a>
-            		<a href="co_nforum.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">nforum.se</a>
-            		<a href="co_cocoa.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">CocoaHeads Göteborg</a>
-            		<a href="co_gomobile.html" rel="external" data-role="button" data-icon="arrow-r" data-iconpos="right">go mobile</a>
+            		<a href="#squeed" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_squeed.png" alt="squeed" /></a>
+            		<a href="#javaforum" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_javaforum.png" alt="javaforum" /></a>
+            		<a href="#nforum"  data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_nforum.png" alt="nforum" /></a>
+            		<a href="#cocoa" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_cocoahead.png" alt="cocoa" /></a>
+            		<a href="#gomobile" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_gomobile.jpg" alt="gomobile" /></a>
             	</div>
             </div>
         </div>  
-          
+
+<!--myagenda---------------------------------------------------------->          
         <div data-role="page" id="myagenda">
             <div data-theme="a" data-role="header" >
                 <h1>
                     MyAgenda
                 </h1>
-                <a rel="external" data-rel="back" data-role="button" data-icon="back" data-iconpos="left">
+                <a href="#home" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="left">
                     Back
+                </a>
+                <a href="#agenda" data-role="button" data-icon="grid" data-iconpos="right">
+                    Agenda
+                </a>
+            </div>
+            <div data-role="content">  
+                
+                <div class="ui-grid-a">
+                    
+                    <!-- ROW 0----------------------------------------------- -->          	
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><strong>&nbsp;</strong></div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><strong>MyAgenda</strong></div>
+                    </div>
+                    
+                    <!-- ROW 1----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">13.00&ndash; 14.00</div>
+                    </div>
+                        
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px">KEY</div>
+                    </div>
+                    
+                    <!-- ROW 2----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">14.10&ndash; 15.00</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 1">NA</a></div>
+                    </div>
+                        
+                    <!-- ROW 3----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a" style="height:50px">BREAK</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a" style="height:50px">&nbsp;</div>
+                    </div>
+                    
+                    <!-- ROW 4----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">15.30&ndash; 16.20</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 2">NA</a></div>
+                    </div>
+                    
+                    <!-- ROW 5----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">16.30&ndash; 17.20</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 3">NA</a></div>
+                    </div>
+                    
+                    <!-- ROW 6----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-a" style="height:50px">BREAK</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-a" style="height:50px">&nbsp;</div>
+                    </div>
+                    
+                    <!-- ROW 7----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">17.50&ndash; 18.40</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 4">NA</a></div>
+                    </div>
+                    
+                    <!-- ROW 8----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-d" style="height:50px">18.50&ndash; 19.40</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 5">NA</a></div>
+                    </div>
+                    
+                    <!-- ROW 9----------------------------------------------- -->
+                    <div class="ui-block-a">
+                        <div class="ui-bar ui-bar-b" style="height:50px">19.40&ndash; 21.00</div>
+                    </div>
+                    
+                    <div class="ui-block-b">
+                        <div class="ui-bar ui-bar-b" style="height:50px">PARTY</div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+<!--SPEAKERS---------------------------------------------------------->        
+        
+<!--mihai---------------------------------------------------------->       
+       <div data-role="page" id="mihai">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Mihai Corlan                    
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
                 </a>
             </div>
             <div data-role="content">        
               
+              <img src="images/mihai.jpg" alt="mihai"/><br />              
+              <br />Mihai Corlan's presentations:<br /> <a href="#phonegap">Getting Started with PhoneGap</a> <br />
+              <br />Mihai Corlan is a worldwide web developer evangelist at Adobe focusing on web technologies. He travels around the world speaking at conferences and meeting developers and customers. Prior to joining Adobe, Mihai was a senior web developer with InterAKT Online (acquired by Adobe in 2006), where he worked on web products such as e-shops, newsletters, and surveys or on RAD tools for web developers. He built web applications and frameworks, desktop software, and rich internet applications using technologies like: PHP, ColdFusion, Java, HTML/CSS, JavaScript, AJAX, ActionScript/Flex and relational databases. He believes that in the future more people will interact with software and consume Internet using smartphones and tablets. And the user experience plays an important role in all these new things that are coming because we’ve come a long way since black screens with tiny white letters. Since 2008 he’s been writing about rich internet applications and mobile development at <a href="http://www.corlan.org/">corlan.org</a><br /> 
+			  <br />You can follow him on Twitter  <a href="http://twitter.com/mcorlan">http://twitter.com/mcorlan</a>
+              
             </div>
-        </div>
-        
+            </div> 
+ 
+ <!--patrik---------------------------------------------------------->
+  		<div data-role="page" id="patrik">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Patrik Malmquist                
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">
+            
+            	<img src="images/patrik.jpg" alt="patrik"/><br />  
+            	<br />Patrik Malmquist's presentation:<br /> <a href="#mapp">Mobile app vs. mobile site</a><br />
+            	<br />Patrik Malmquist is a tech loving geek that left development for strategy, project management and software development organization. In his role as Enterprise Mobility Manager for <a href="http://www.sigma.se/">Sigma</a> he works with architecture and solution selling within mobile and web solutions. Between 2005 and 2011 he was the software development manager for <a href="https://www.minpension.se/">www.minpension.se</a> and project manager for pension prognosis tools for web and mobile solutions for <a href="http://www.pensionsmyndigheten.se/">the Swedish Pensions Agency</a>. You can follow him at his personal blog <a href="http://www.applitude.se">http://www.applitude.se</a>  that focuses on leading productive software development teams and on his <a href="http://blogg.sigma.se/en/Mobility/Patrik-Malmquist">Sigma blog</a>  that focuses on the mobile work life.
+                           
+              
+            </div>
+            </div>
+            
+<!--dag---------------------------------------------------------->
+ 		<div data-role="page" id="dag">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Dag König                    
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              
+            	<img src="images/dag.jpg" alt="dag"/><br />  
+            	<br />Dag König's presentation:<br /> <a href="#tba">TBA</a><br />
+            	<br />Dag König, teknisk evangelist på Microsoft. Han är Windows Phone Champ i Sverige, vilket innebär att han jobbar med partners och alla andra som är intresserade av att utveckla appar för Windows Phone. Dag har själv varit med och utvecklar en hel bunt av appar själv. Följ honom på Twitter via <a href="http://twitter.com/buzzfrog">@buzzfrog</a>.
+            </div>
+            </div>
+ 
+<!--danwei----------------------------------------------------------> 
+ 		<div data-role="page" id="danwei">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Danwei Tran Luciani            
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">     
+            
+            <img src="images/danwei.jpg" alt="danwei"/><br />
+            <br />Danwei Tran Luciani's presentation:<br /> <a href="#mdesign">Skapa snygga appar i Metro design</a><br />
+            <br />Danwei Tran Luciani är teknisk evangelist på Microsoft. Hennes nuvarande fokusområden är Metro-design, HTML5 och nästa version av Windows. Hon gillar att samla Xbox achievements, att geocacha, och är svag för kaniner. Följ hennes tweets på <a href="http://twitter.com/danweitran">@danweitran</a>
+            
+               
+              
+            </div>
+            </div>
+ 
+<!--pär---------------------------------------------------------->
+		<div data-role="page" id="par">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Pär Sikö                   
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              
+              <img src="images/par.png" alt="par"/><br/>
+              <br />Pär Sikö's presentation:<br /> <a href="#amashups">Having fun with Android mashups</a><br />
+              <br />Pär is a java developer, working primarily with Android but with a long and happy history that includes J2ME, Swing and JavaFX.<br /> 
+              <br />He’s been working with Java since it’s inception and tried everything from architecture and large enterprise systems to mobile devices.<br /> 
+              <br />As a developer Pär is curious and thorough and knows the importance of pixels and colors. Curious to learn new things, growing as a human being in the process, and happy to teach and inspire others about it. Thorough to ensure that the quality is on par with expectations and, perhaps most importantly, to really understand something makes it so much easier and fun to work with. Pixels and Colors have never been as important as it is today, everything is measured by it’s looks, and Pär’s focus on making beautiful applications is a deliberate strategy that has paid off numerous times.<br /> 
+              <br />Pär has been a busy speaker for the last couple of years, presenting on the international stage as well as on Swedish conferences.<br /> 
+              <br />He was awarded with a ‘JavaOne Rock Star’ for his presentation in San Francisco 2011. For Pär, the key success factor in a presentation is mixing good content with a big portion of humour and he wishes that more people would dare to step away from boring bullet lists and do something new and creative when presenting.
+              
+              
+            </div>
+            </div>
+
+<!--martin---------------------------------------------------------->
+		<div data-role="page" id="martin">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Martin Gunnarsson                 
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              
+              <img src="images/martin.png" alt="martin"/><br />
+              <br />Martin Gunnarsson's presentation:<br /> <a href="#amashups">Having fun with Android mashups</a><br /> 
+              <br />Great programmers are usually lousy designers, and vice versa, but Martin is one of those rare crossbreeds who can handle both. Graphics programming and GUI design suits him particularly well, but being a true perfectionist, heʼs rarely satisfied with the results of his own work. Martin has worked with many different client side frameworks the last few years, including Swing, JavaFX, Android, Javascript and iOS.
+              
+            </div>
+            </div>
+ 
+ <!--johan---------------------------------------------------------->
+  		<div data-role="page" id="johan">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Johan Sanneblad             
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">   
+            
+            <img src="images/Johan.jpg" alt="johan"/><br />
+            <br />Johan Sanneblad's presentation:<br /> <a href="#gamedev">Game Development with Unity for Mobile Devices</a><br/>
+            <br />Johan Sanneblad works as a consultant manager at HiQ. Johan has a Ph.D in mobile IT where he designed and implemented advanced cross-platform game development tools for companies such as Nokia and Sony Online Entertainment. Johan has worked at HiQ since 2005 in various roles including both developer and project leader, for clients such as Ericsson, HP, SJ, Skype, Sony Ericsson, Telia, Volvo Cars, Volvo Trucks, and many others. Johan has a genuine game interest, and created the game “Tomten” in Unity together with his wife Helena in his spare time during autumn 2011. The game was launched on December 13 and reached #13 in most downloaded games in the Swedish App Store in December.
+                 
+              
+            </div>
+            </div>
+ 
+ <!--glenn---------------------------------------------------------->
+	 	<div data-role="page" id="glenn">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Glenn Richard Bech              
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              
+              <img src="images/glenn.jpg" alt="glenn"/><br />
+              <br />Glenn Richard Bech's presentation:<br /> <a href="#tackand">Tackling Android fragmentation</a><br />
+              <br />Glenn Bech manages the Inmeta Consulting Java team and works hands-on in software development projects. He has developed software on the Java platform , mainly server side. for the Banking and insurance industry for the last ten years. For Glenn, as for many a developer, it all started 20 years ago with “Poke 53281,0″ on the Commodore 64. Since then, he has programmed a wide range of languages. The first of his now several Android applications was published on the Android market in february 2011. He saw the fun and potential in tablet devices and was quick to embrace Honeycomb. He is now a very passionate Android developer. Glenn is the co-founder of the Norwegian software comminity <a href="http://www.baksia.org/">Baksia</a> that is non-profit and promotes everything scalable and backend related.
+              
+            </div>
+            </div>
+
+<!--SUBJECTS---------------------------------------------------------->
+           
+ <!--phonegap---------------------------------------------------------->
+  		<div data-role="page" id="phonegap">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Getting started with Phonegap       
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">   
+            
+            Presentation speaker: <br /><a href="#mihai">Mihai Corlan</a><br />
+			<br />PhoneGap is the open source platform for developing mobile applications that run across different devices and operating systems. If this is not cool enough then let me add one more thing: you code using JavaScript, HTML, and CSS.<br />
+ 			<br />In this session you will find out what PhoneGap is and how you can use it to build mobile applications.<br />
+			     
+              
+            </div>
+            </div>
+            
+<!--mapp---------------------------------------------------------->
+		<div data-role="page" id="mapp">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Mobile App vs Mobile Site                   
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+            <h2>Mobile App vs Mobile Site </h2>
+            Presentation speaker: <br /><a href="#patrik">Patrik Malmquist</a><br />
+			<br />When developing solutions for mobile users you need to have the right tool for the right situation. Should you develop a native app in one or several platforms like for example iOS, Android or Windows Phone 7 or should you adapt your website for mobile devices or is perhaps the best solution to use a hybrid of the two? This session analyzes the pros and cons of different solutions from different perspectives like functional requirements, performance, user experience, compatibility, cost and maintenance.<br />
+ 			 
+            </div>
+            </div>
+            
+<!--tba---------------------------------------------------------->
+		<div data-role="page" id="tba">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	TBA-Dag                
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              
+              <h2>TBA-Dag</h2>
+            Presentation speaker: <br /><a href="#dag">Dag König</a><br />
+			<br />
+			
+            </div>
+            </div>
+		
+<!--mdesign---------------------------------------------------------->
+ 		<div data-role="page" id="mdesign">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Snygga appar i metro design                    
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+               
+               <h2>Snygga appar i metro design</h2>
+            Presentation speaker: <br /><a href="#danwei">Danwei Tran Luciani</a><br />
+			<br />Med Windows Phone introducerades ett helt nytt designspråk som kallas Metro. Vi går igenom grundprinciperna för Metro-design och de guidelines som finns när det gäller grafik och animeringar. Vi kikar också på exempel på hur du kan få din app att stå ut ur mängden och hur du undviker vanliga certiferingsproblem när du lägger upp din app på Marketplace. I slutändan handlar allt om användarupplevelsen.<br />
+ 			
+            </div>
+            </div>
+            
+<!--amashups---------------------------------------------------------->
+		<div data-role="page" id="amashups">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Fun with Android Mashups                    
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+                
+                <h2>Fun with Android Mashups </h2>
+            Presentation speakers: <br /><a href="#par">Pär Sikö</a><br />
+            <br /><a href="#martin">Martin Gunnarsson</a><br />
+			<br />Mashup is a combination of information and services from two unrelated sources, for example showing photos from Flickr on a map from OpenStreetMap. In this presentation we take the mashup one step further by combining rich Android user interfaces with different components and services available on the web, in order to create amazing programs that blur the line between application and web content.<br />
+ 			<br />The audience will learn how to load data from different sources, how to show web content in an Android application, and how to set up two-way communications between the Android application and JavaScript code in the web view.<br />
+			<br />This presentation will be given in Swedish.<br />			
+ 			
+            </div>
+            </div>
+            
+<!--gamedev---------------------------------------------------------->
+		<div data-role="page" id="gamedev">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Game Development        
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              
+              <h2>Game Development </h2>
+            Presentation speaker: <br /><a href="#johan">Johan Sanneblad</a><br />
+			<br />Johan Sanneblad, Ph.D, has the past years developed and launched numerous mobile apps and games for Android and iOS using the game development platform Unity. In this presentation Johan will introduce tips and tricks and lessons learnt while creating games for a wide range of platforms and devices. Topics include Unity game architecture design, how to create one user interface layout and code for all different screen sizes and aspect ratios, asset management, code and memory optimization techniques, and much more. The seminar is useful for both experienced Unity developers and for novice programmers that want to dive into game development for mobile devices.<br />
+ 			
+            </div>
+            </div>
+            
+<!--tackand---------------------------------------------------------->
+		<div data-role="page" id="tackand">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Tackling Android fragmentation                 
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">   
+            
+            <h2>Tackling Android fragmentation</h2>
+            Presentation speakers: <br /><a href="#glenn">Glenn Richard Bech</a><br />
+            <br />The number of Android powered devices are sky rocketing. To reach larger audiences, developers want to create applications that are compatible with as many devices as possible.<br />
+ 			<br />Adoption of Ice cream sandwich is steady but slow. This results in developers having to cope with different android versions for years to come. The diversity of devices running the operating systems provide great choice and joy for consumers. On the other hand, screen sizes, aspect ratios and pixels densities vary dramatically and provide additional challenges for developers.<br /> 
+			<br />The presentation will cover how to use fragments to achieve a high level of code reuse in the UI layer. The presentation will also cover how to use the Android compatibility package to build applications that can be installed, from a single APK to both phones and tablets. The topic will be explained using code, and a complete example of how to build a highly portable Android application will be given during the presentation.<br />
+                 
+              
+            </div>
+            </div>
+  
+<!--SPONSORS---------------------------------------------------------->
+
+<!--Microsoft---------------------------------------------------------->
+		<div data-role="page" id="microsoft">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Microsoft             
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.microsoft.com/sv-se/default.aspx"><img src="images/microsoft.jpg" alt="microsoft"/></a><br/>
+              <br/>
+            </div>
+            </div>          
+		
+<!--Informator---------------------------------------------------------->
+		 <div data-role="page" id="informator">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Informator     
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.informator.se"><img src="images/informator.gif" alt="informator"/></a><br />
+              	<br />Rätt använda IT-lösningar automatiserar rutinmässiga arbetsuppgifter och minskar arbetsbördan och risken för fel. Det ger minskade kostnader och ökande effektivitetsvinster.<br />
+ 				<br />Men många organisationer utnyttjar bara en bråkdel av kraften i sina IT-lösningar. För att frigöra de stora möjligheter som dagens system och applikationer medför, behövs kunskap och kompetens.<br />
+ 				<br /><h2>Affärsorienterad kompetensutveckling</h2>
+				<br />Informator arbetar med kunskapsöverföring som hjälper organisationer och individer att utveckla rätt kompetens. Vi ser det som en del av våra kunders verksamhets- och affärsutveckling. Syftet med ny kunskap är att organisationen ska fungera bättre. Det åstadkommer vi genom att utbilda en individ i taget.<br />
+ 				<br />När en individ utvecklas, får han/hon ut mer av sitt arbete och företaget får ut mer av varje medarbetare. Det leder till ökad lönsamhet, vilket ger utrymme för ännu mer utveckling.<br />
+ 				<br />Den här goda cirkeln börjar med kunskap. Att koppla kunskapsöverföring och kompetensutveckling till affärsnytta är därför en viktig del av vårt sätt att arbeta.<br />
+ 				<br />Utifrån ett affärsperspektiv analyserar vi nuvarande och framtida kunskapsbehov. Vi rekommenderar vilka utbildningsinsatser som behövs. Efter genomförd utbildning gör vi uppföljningar som säkerställer att kunskapsmålen är uppnådda<br />
+              
+            </div>
+            </div>		
+            
+<!--Appland---------------------------------------------------------->
+		<div data-role="page" id="appland">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Appland        
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.appland.se/"><img src="images/appland.png" alt="appland"/></a><br />
+              <br /><h2>Marknadsplats för Svenska Android-appar</h2><br />
+ 				<br />Alla appar är kvalitetskontrollerade så du kan känna dig trygg när du laddar ner den till din telefon. Appland innehåller både gratis- och betalappar. Väljer du att köpa en app så läggs kostnaden på din mobilräkning eller dras från ditt kontantkort, du behöver alltså inte registrera dig eller använda kreditkort. För att kunna ladda ner gratis- eller betalappar måste du först installera Appland i din smartphone.<br />
+              
+            </div>
+            </div>
+            
+<!--Nokia---------------------------------------------------------->
+		<div data-role="page" id="nokia">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Nokia          
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.nokia.com/se-sv/"><img src="images/nokia.png" alt="nokia"/></a><br />
+              <br />
+            </div>
+            </div>
+            
+<!--CONTRIBUTORS---------------------------------------------------------->
+
+<!--Squeed---------------------------------------------------------->
+		<div data-role="page" id="squeed">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Squeed
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.squeed.se/"><img src="images/squeed.png" alt="squeed"/></a><br />
+              	<br />Squeeders jobbar med arkitekturfrågor, coaching, mentorskap, utbildningar, systemutveckling, metoder mm. Vi är experter på Java, Microsoft .Net och open source. Som Microsoft MVP och Insider har vi bra relation med Microsoft samt vetskap och kunskap om det kommande och senaste från Microsoft .Net.<br />
+              
+            </div>
+            </div>
+           
+<!--javaforum---------------------------------------------------------->
+		<div data-role="page" id="javaforum">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Javaforum.se
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button"  data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.javaforum.se"><img src="images/javaforum.png" alt="javaforum"/></a><br />
+              	<br />Javaforum is a Swedish Java-community supporting Java developers by arranging meetings, seminars and conferences. More information about Javaforum and upcoming meetings can be found at <a href="http://www.javaforum.se">www.jforum.se</a><br />
+ 				<br />Javaforum hosts meetings in Stockholm, Göteborg, Malmö and Umeå.<br />
+              
+            </div>
+            </div>
+ 
+ <!--nforum---------------------------------------------------------->
+ 		<div data-role="page" id="nforum">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	nforum.se        
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.nforum.se/"><img src="images/nforum.png" alt="nforum"/></a><br />
+             	<br />nforum är en svensk .net-community i Göteborg med syfte att stödja svenska .net-utvecklare genom regelbundna möten med intressanta seminarier och mingel.<br />
+				<br />nforum har ett brett samarbete med många andra fristående communities så som Swenug och Javaforum.<br />
+ 				<br />Vill du ställa upp som talare eller tipsa om talare eller kanske till och med vill sponsra ett event i framtiden så är du välkommen att kontakta oss med just dina ideer.  Allt är välkommet.<br />
+ 				<br />Vid frågor tveka inte att kontakta oss via: nforum (a) squeed.com<br />
+ 				<br />Mvh nforum <a href="http://www.nforum.se/">www.nforum.se</a><br /> 
+           </div>
+         </div>
+         
+<!--cocoa---------------------------------------------------------->
+		 <div data-role="page" id="cocoa">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	CocoaHeads Göteborg
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.meetup.com/cocoaheads-goteborg/"><img src="images/cocoahead.png" alt="cocoa"/></a><br />
+    	       	<br />CocoaHeads is a group devoted to discussion of Apple Computer’s Cocoa <a href="https://developer.apple.com/technologies/mac/cocoa.html">Framework</a> for programming on MacOS X (including the iPhone). During monthly meetings, members present on their projects and offer tutorials on various programming topics.<br />
+ 				<br />Read more about CocoaHeads on our <a href="http://www.meetup.com/cocoaheads-goteborg/">website</a><br />
+              
+            </div>
+            </div>
+            
+<!--gomobile---------------------------------------------------------->
+		<div data-role="page" id="gomobile">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	go mobile     
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.go-mobile.se/"><img src="images/gomobile.jpg" alt="gomobile"/></a><br />
+              	<br />go mobile is a non profit organisation targeted to grow the mobile industry in the Gothenburg region. The organisation will help start-ups and take small companies to the next level through networking, mentorship, global PR and VC funding from local and international investors.<br />
+ 				<br /><h2>Mobile and Mobility</h2><br /> 
+				<br />Mobile is the state of being in motion and is a generic term describing the ability to use technology on the move, and often refer to access and create information from connected, portable, networked communication device.<br />
+ 				<br />Mobile is the core of the individual and the organisations communication, digital consumption and lifestyle at home and at work. Regardless of information carrier (desktop, laptop, tablet, phone, console or TV we are always online, available and expect the same experience regardless of platform.<br />
+ 				<br /><a href="http://www.linkedin.com/groups/go-mobile-3088466?gid=3088466&trk=myg_ugrp_ovr">go mobile on LinkedIn</a><br />
+ 				<br />During the spring 2010 a group was created on LinkedIn for professionals active in the mobile industry with a relationship to Gothenburg in some way. No marketing was needed, the logo go:mobile spoke its own words.<br />
+ 				<br />Quite soon professionals from all spectrum of the mobile industry joined the group. We are now about to embark on the next level an show that Gothenburg will go mobile.<br />
+               </div>
+            </div>
+
+      <!-- dialog ------------------------------------------>
+      
+      <div data-role="page" id="dialog">
+          <div data-role="header">
+              <h1 id="dialogTitle" style="margin-left  : 20px;
+                  margin-right : 0px;">Session Chooser</h1>
+              
+          </div>
+          <div data-role="content">
+              
+              <div id="dialogContent"></div>
+              
+              <div id="dialogButtons">
+                  
+                  <!-------------- two buttons div for dialog  --------------------->
+                  
+                  <div class="ui-grid-a" id="twoButtons" style="display: none">
+                      
+                      <div class="ui-block-a">
+                          <a id="yesButton" data-role="button" data-rel="back" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Yes</span></span></a> 
+                      </div>
+                      
+                      <div class="ui-block-b">
+                          <a id="noButton" data-role="button" data-rel="back" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">No</span></span></a> 
+                      </div>
+                      
+                  </div>
+                  
+                  <!------------------ one button div for dialog -------------------->
+                  <div id="oneButton" style="display: none">
+                      <a id="okButton" data-role="button" data-rel="back" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Ok</span></span></a> 
+                  </div>
+                  <!-------------------------------------------------------------->
+              </div>
+              
+          </div>
+          
+      </div>
+      
   </body>
 
 </html>

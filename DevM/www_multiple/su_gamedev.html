@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="gamedev">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Game Development        
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <p>
+            Presentation speaker: <br /><a href="s_johan.html">Johan Sanneblad</a><br />
+			<br />Johan Sanneblad, Ph.D, has the past years developed and launched numerous mobile apps & games for Android & iOS using the game development platform Unity. In this presentation Johan will introduce tips & tricks and lessons learnt while creating games for a wide range of platforms and devices. Topics include Unity game architecture design, how to create one user interface layout and code for all different screen sizes and aspect ratios, asset management, code and memory optimization techniques, and much more. The seminar is useful for both experienced Unity developers and for novice programmers that want to dive into game development for mobile devices.<br />
+ 			</p>
+            </div>
+            </div>
+
+</body>
+</html>

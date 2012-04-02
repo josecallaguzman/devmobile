@@ -1,0 +1,69 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="gomobile">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	go mobile     
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.go-mobile.se/"><img src="images/gomobile.jpg"></a><br />
+              	<br />go mobile is a non profit organisation targeted to grow the mobile industry in the Gothenburg region. The organisation will help start-ups and take small companies to the next level through networking, mentorship, global PR and VC funding from local and international investors.<br />
+ 				<br /><h2>Mobile and Mobility</h2><br /> 
+				<br />Mobile is the state of being in motion and is a generic term describing the ability to use technology on the move, and often refer to access and create information from connected, portable, networked communication device.<br />
+ 				<br />Mobile is the core of the individual and the organisations communication, digital consumption and lifestyle at home and at work. Regardless of information carrier (desktop, laptop, tablet, phone, console or TV we are always online, available and expect the same experience regardless of platform.<br />
+ 				<br /><a href="http://www.linkedin.com/groups/go-mobile-3088466?gid=3088466&trk=myg_ugrp_ovr">go mobile on LinkedIn</a><br />
+ 				<br />During the spring 2010 a group was created on LinkedIn for professionals active in the mobile industry with a relationship to Gothenburg in some way. No marketing was needed, the logo go:mobile spoke its own words.<br />
+ 				<br />Quite soon professionals from all spectrum of the mobile industry joined the group. We are now about to embark on the next level an show that Gothenburg will go mobile.<br />
+               </div>
+            </div>
+
+</body>
+</html>

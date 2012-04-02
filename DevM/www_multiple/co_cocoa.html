@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="cocoa">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	CocoaHeads Göteborg
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.meetup.com/cocoaheads-goteborg/"><img src="images/cocoahead.png"></a><br />
+    	       	<br />CocoaHeads is a group devoted to discussion of Apple Computer’s Cocoa <a href="https://developer.apple.com/technologies/mac/cocoa.html">Framework</a> for programming on MacOS X (including the iPhone). During monthly meetings, members present on their projects and offer tutorials on various programming topics.<br />
+ 				<br />Read more about CocoaHeads on our <a href="http://www.meetup.com/cocoaheads-goteborg/">website</a><br />
+              
+            </div>
+            </div>
+
+</body>
+</html>

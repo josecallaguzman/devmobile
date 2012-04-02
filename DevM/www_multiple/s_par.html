@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="par">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Pär Sikö                   
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <p>
+              <img src="images/par.png"><br/>
+              <br />Pär Sikö's presentation:<br /> <a href="su_amashups.html">Having fun with Android mashups</a><br />
+              <br />Pär is a java developer, working primarily with Android but with a long and happy history that includes J2ME, Swing and JavaFX.<br /> 
+              <br />He’s been working with Java since it’s inception and tried everything from architecture and large enterprise systems to mobile devices.<br /> 
+              <br />As a developer Pär is curious and thorough and knows the importance of pixels and colors. Curious to learn new things, growing as a human being in the process, and happy to teach and inspire others about it. Thorough to ensure that the quality is on par with expectations and, perhaps most importantly, to really understand something makes it so much easier and fun to work with. Pixels and Colors have never been as important as it is today, everything is measured by it’s looks, and Pär’s focus on making beautiful applications is a deliberate strategy that has paid off numerous times.<br /> 
+              <br />Pär has been a busy speaker for the last couple of years, presenting on the international stage as well as on Swedish conferences.<br /> 
+              <br />He was awarded with a ‘JavaOne Rock Star’ for his presentation in San Francisco 2011. For Pär, the key success factor in a presentation is mixing good content with a big portion of humour and he wishes that more people would dare to step away from boring bullet lists and do something new and creative when presenting.
+              
+              </p>
+            </div>
+            </div>
+
+</body>
+</html>

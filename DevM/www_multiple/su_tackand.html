@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE HTML>
+<html >
+
+  <head>
+    <title>PhoneGap</title>
+    <meta charset="utf-8" />
+    <!-- <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no"/> -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+       
+  
+    
+  <link rel="stylesheet" href="jquery.mobile-1.0a3.min.css">
+  
+  
+   
+ 
+  <script type="text/javascript" charset="utf-8" src="jquery.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="jquery.mobile-1.0a3.min.js"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
+  
+  <script type="text/javascript" charset="utf-8">
+		 function onLoad(){
+
+          document.addEventListener("deviceready", onDeviceReady, true);
+			
+			}
+	</script>
+	<script type="text/javascript" charset="utf-8">
+    $(document).bind("mobileinit", function() {
+    	$.mobile.allowCrossDomainPages = true;
+    	$.support.cors = true;
+      
+    });
+  </script>					
+
+    
+ 
+   
+ </head>  
+  <body onload="onLoad()">
+  	  
+        <div data-role="page" id="tackand">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Tackling Android fragmentation                 
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" rel="external" data-rel="reverse" data-transition="slide" href="index.html" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">   
+            <p>
+            Presentation speakers: <br /><a href="s_glenn.html">Glenn Richard Bech</a><br />
+            <br />The number of Android powered devices are sky rocketing. To reach larger audiences, developers want to create applications that are compatible with as many devices as possible.<br />
+ 			<br />Adoption of Ice cream sandwich is steady but slow. This results in developers having to cope with different android versions for years to come. The diversity of devices running the operating systems provide great choice and joy for consumers. On the other hand, screen sizes, aspect ratios and pixels densities vary dramatically and provide additional challenges for developers.<br /> 
+			<br />The presentation will cover how to use fragments to achieve a high level of code reuse in the UI layer. The presentation will also cover how to use the Android compatibility package to build applications that can be installed, from a single APK to both phones and tablets. The topic will be explained using code, and a complete example of how to build a highly portable Android application will be given during the presentation.<br />
+            </p>     
+              
+            </div>
+            </div>
+
+</body>
+</html>

@@ -5,7 +5,9 @@
 
   <head>
     
-    <meta name="viewport" content="initial-scale=1.0,width=devicewidth,user-scalable=no" charset="utf-8"/>
+    <!-- <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" /> -->
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0,width=device-width,user-scalable=no"/>
     
     
     <title>PhoneGap</title>
@@ -13,9 +15,10 @@
   	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" type="text/css" media="screen" title="no title"/>   
  
   	<script type="text/javascript" charset="utf-8" src="jquery-1.7.1.min.js"></script>
+  	<script type="text/javascript" charset="utf-8" src="devMobile.js"></script>
   	<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
   	<script type="text/javascript" charset="utf-8" src="cordova-1.5.0.js"></script>
-  	<script type="text/javascript" charset="utf-8" src="devMobile.js"></script>
+  	
 
   
   
@@ -28,7 +31,7 @@
   <body >	
   
   <!--home---------------------------------------------------------->
-	  <div data-role="page" id="home">
+	  <div data-role="page" id="home" >
             <div data-theme="a" data-role="header">
                <h1>
                dev:Mobile
@@ -56,24 +59,24 @@
                 </a>
             </div>
             <div data-role="footer" style="text-align:center">
-            	<a href="http://devmobile.se/"><img src="images/devmobile.jpg" alt="devmob"/></a>
+            	<a href="http://www.devmobile.se/" ><img src="images/devmobile.jpg" alt="devmob"/></a>
             </div>
         </div>	
   
   <!--agenda---------------------------------------------------------->          
-        <div data-role="page" id="agenda">
+        <div data-role="page" id="agenda" style="width:540px">
             <div data-theme="a" data-role="header" >
                 <h1>
                     Agenda
                 </h1>
-                <a href="#home" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="left">
-                    Back
+                <a href="#home" data-role="button" data-transition="slide" data-icon="home" data-iconpos="left">
+                    Home
                 </a>
-                <a href="#myagenda" data-role="button" data-icon="grid" data-iconpos="right">
+                <a href="#myagenda" data-role="button" data-transition="slide" data-icon="grid" data-iconpos="right">
                     MyAgenda
                 </a>
             </div>
-            <div data-role="content">
+            <div data-role="content" >
             <div class="ui-grid-d">
                     <!-- ROW 0----------------------------------------------- -->          	
                     <div class="ui-block-a" >
@@ -111,8 +114,8 @@
                     <div class="ui-block-a">
                         <div class="ui-bar ui-bar-d" style="height:50px">14.10-15.00</div>
                     </div>
-                    <div class="ui-block-b">
-                        <div class="ui-bar ui-bar-d" style="height:50px"><a href="#dialog" data-rel="dialog" id="SESSION 1-A">SESSION 1</a></div>
+                    <div class="ui-block-b" >
+                        <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 1-A">SESSION 1</a></div>
                     </div>
                     <div class="ui-block-c">
                         <div class="ui-bar ui-bar-d" style="height:50px" ><a href="#dialog" data-rel="dialog" id="SESSION 1-iOS">SESSION 1</a></div>
@@ -302,6 +305,10 @@
             		<a href="#informator" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_informator.gif" alt="informator" /></a>
             		<a href="#appland" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_appland.png" alt="appland" /></a>
             		<a href="#nokia" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_nokia.png" alt="nokia" /></a>
+            		<a href="#af" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_af.jpg" alt="af" /></a>
+            		<a href="#ibm" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_ibm.jpg" alt="ibm" /></a>
+            		<a href="#ps" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_ps.jpg" alt="ps" /></a>
+            		<a href="#adecco" data-role="button" data-icon="arrow-r" data-iconpos="right"><img src="images/btn_adecco.jpg" alt="adecco" /></a>
             	</div>  
             </div>
         </div>   
@@ -333,8 +340,8 @@
                 <h1>
                     MyAgenda
                 </h1>
-                <a href="#home" data-direction="reverse" data-role="button" data-icon="back" data-iconpos="left">
-                    Back
+                <a href="#home" data-role="button" data-icon="home" data-transition="slide" data-iconpos="left">
+                    Home
                 </a>
                 <a href="#agenda" data-role="button" data-icon="grid" data-iconpos="right">
                     Agenda
@@ -343,98 +350,187 @@
             <div data-role="content">  
                 
                 <div class="ui-grid-a">
+
                     
+
                     <!-- ROW 0----------------------------------------------- -->          	
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><strong>&nbsp;</strong></div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><strong>MyAgenda</strong></div>
+
                     </div>
+
                     
+
                     <!-- ROW 1----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">13.00&ndash; 14.00</div>
+
                     </div>
+
                         
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">KEY</div>
+
                     </div>
+
                     
+
                     <!-- ROW 2----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">14.10&ndash; 15.00</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 1">NA</a></div>
+
                     </div>
+
                         
+
                     <!-- ROW 3----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-a" style="height:50px">BREAK</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-a" style="height:50px">&nbsp;</div>
+
                     </div>
+
                     
+
                     <!-- ROW 4----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">15.30&ndash; 16.20</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 2">NA</a></div>
+
                     </div>
+
                     
+
                     <!-- ROW 5----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">16.30&ndash; 17.20</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 3">NA</a></div>
+
                     </div>
+
                     
+
                     <!-- ROW 6----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-a" style="height:50px">BREAK</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-a" style="height:50px">&nbsp;</div>
+
                     </div>
+
                     
+
                     <!-- ROW 7----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">17.50&ndash; 18.40</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 4">NA</a></div>
+
                     </div>
+
                     
+
                     <!-- ROW 8----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px">18.50&ndash; 19.40</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-d" style="height:50px"><a id="MYSESSION 5">NA</a></div>
+
                     </div>
+
                     
+
                     <!-- ROW 9----------------------------------------------- -->
-                    <div class="ui-block-a">
+
+                    <div class="ui-block-a" style="width:30%">
+
                         <div class="ui-bar ui-bar-b" style="height:50px">19.40&ndash; 21.00</div>
+
                     </div>
+
                     
-                    <div class="ui-block-b">
+
+                    <div class="ui-block-b" style="width:70%">
+
                         <div class="ui-bar ui-bar-b" style="height:50px">PARTY</div>
+
                     </div>
-                    
-                </div>
+                    </div>
                 
             </div>
         </div>
@@ -450,7 +546,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -473,7 +569,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -496,7 +592,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -517,7 +613,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -541,7 +637,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -568,7 +664,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -590,7 +686,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -613,7 +709,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -637,7 +733,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -660,7 +756,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -681,7 +777,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -703,7 +799,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -725,7 +821,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -750,7 +846,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -772,7 +868,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -799,13 +895,28 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
             <div data-role="content">        
               <a href="http://www.microsoft.com/sv-se/default.aspx"><img src="images/microsoft.jpg" alt="microsoft"/></a><br/>
               <br/>
+              <br/>At Microsoft, we’re motivated and inspired every day by how our customers use our software to find creative solutions to business problems, develop breakthrough ideas, and stay connected to what’s most important to them.<br/>
+ 				<br/>We run our business in much the same way, and believe our eight business divisions offer the greatest potential to serve our customers. They are:<br/>
+ 
+				<br/>Online Services Division: Microsoft’s search, portal, advertising and personal communications services, including online information offerings such as Bing and the MSN portals and channels.<br/>
+ 				<br/>Server and Tools Business: Microsoft infrastructure software, developer tools and cloud platform, including products such as Windows Server, SQL Server, Visual Studio, System Center and the Windows Azure Platform.<br/>
+ 				<br/>Microsoft Business Solutions: A portfolio of Microsoft Dynamics products and services, as well as Microsoft Health Solutions.<br/>
+ 				<br/>Microsoft Office Division: Productivity products and services, including Office, Exchange, SharePoint, Lync, Project, Visio, and Microsoft’s speech technology investments.<br/>
+ 				<br/>Interactive Entertainment Business: Key entertainment experiences that span gaming, music and video across multiple screens, including Xbox 360, Xbox LIVE, the controller-free Kinect for Xbox 360, Zune Music and Video, and Mediaroom, as well as PC and mobile interactive entertainment.<br/>
+ 				<br/>Windows Phone Division: Microsoft software and services for Windows Phones worldwide.<br/>
+ 				<br/>Windows & Windows Live Division: All Windows businesses, including Windows, Windows Live and Internet Explorer.<br/>
+ 				<br/>Skype: A division of Microsoft, transforming communications for computers, mobile devices and the connected living room.<br/>
+ 				
+ 				<br/>We are committed long term to the mission of helping our customers realize their full potential. Just as we constantly update and improve our products, we want to continually evolve our company to be in the best position to accelerate new technologies as they emerge and to better serve our customers.<br/>
+ 				<br/><a href="http://www.microsoft.se">http://www.microsoft.se</a><br/>
+              
             </div>
             </div>          
 		
@@ -818,7 +929,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -844,7 +955,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -865,13 +976,107 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
             <div data-role="content">        
               <a href="http://www.nokia.com/se-sv/"><img src="images/nokia.png" alt="nokia"/></a><br />
               <br />
+              <br />Nokia är en världsledande aktör inom mobil kommunikation med produkter som har blivit en naturlig del av människors liv världen över.<br />
+ 				<br />Varje dag använder mer än 1,3 miljarder människor sin Nokia för att fånga och dela med sig av upplevelser, få tillgång till information, 
+						hitta rätt eller bara prata med andra människor. Nokias teknologi- och designinnovationer har gjort varumärket till ett av världens mest kända.<br /> 
+					<br />För mer information, besök <a href="http://www.nokia.se/om-nokia">http://www.nokia.se/om-nokia</a><br />
+              
+            </div>
+            </div>
+            
+<!--IBM---------------------------------------------------------->
+		<div data-role="page" id="ibm">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	IBM          
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.ibm.com/se/sv/"><img src="images/ibm_pos_blue.jpg" alt="nokia"/></a><br />
+              <br />
+              <br /><a href="http://www.ibm.com/se/sv/">visit the homepage</a><br />
+            </div>
+            </div>
+
+<!--PS---------------------------------------------------------->
+		<div data-role="page" id="ps">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Purple Scout          
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.purplescout.com/"><img src="images/ps.jpg" alt="ps"/></a><br />
+              <br />
+              <br />Purple Scout is actively involved in developing apps with Titanium; making us uniquely positioned to provide quality, real world, practical and hands-on training. We are passionate about inspiring our customers to learn and go out into the wild building apps to ignite the world.<br />
+ 				<br />The company was founded in 2004 in Malmö, Sweden with offices in Gothenburg, Stockholm, and has experienced exceptional growth ever since, providing training throughout Europe.<br />
+            </div>
+            </div>
+            
+<!--AF---------------------------------------------------------->
+		<div data-role="page" id="af">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	ÅF          
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.afconsult.com/sv/"><img src="images/af.jpg" alt="af"/></a><br />
+              <br />
+              <h2>Nytänkande med erfarenhet</h2><br />
+ 			  <br />ÅF är ett ledande teknikkonsultföretag med kunskap som vilar på hundraårig erfarenhet.  ÅF kombinerar avancerat ingenjörskunnande, förnyelse och modernaste teknik med mångårig tradition och förankring i svensk industri. Få teknikkonsulter har idag samma bredd och resurser.<br />
+ 				<br />Genom vår breda kunskap får vi förmånen att vara en resurs i en rad framtidsinriktade uppdrag inom de mest skiftande områden för både stora och små företag. Det kan vara allt från utveckling av mobiltelefoni till projektering av kompletta energianläggningar.<br />
+ 				<br />ÅF har idag cirka 4 500 medarbetare. Vår bas finns i Europa, men vår verksamhet och våra kunder finns i hela världen.<br />
+ 				<br />Vill du bli en av oss? Läs mer på <a href="http://afconsult.com/sv/Jobb/">http://afconsult.com/sv/Jobb/</a><br />
+              
+            </div>
+            </div>
+            
+<!--adecco---------------------------------------------------------->
+		<div data-role="page" id="adecco">
+            <div data-theme="a" data-role="header" data-position="fixed">
+                <h3>
+                	Adecco          
+                </h3>
+                <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
+                    Back
+                </a>
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
+                    Home
+                </a>
+            </div>
+            <div data-role="content">        
+              <a href="http://www.adecco.se/"><img src="images/adecco.jpg" alt="adecco"/></a><br />
+              <br />
+              <br />Adecco IT Konsult är en nystartad IT-konsultverksamhet inom Adeccokoncernen. Vi bygger upp en platt organisation fokuserad kring värdeskapande lösningar och expertkompetens.
+ 					Ny­fikenhet, kompetens och framkant är nyckelord för Adecco IT Konsult och vi drivs framåt av vårt gemensamma intresse för nya spännande tekniker och lösningar. Våra kunder ­finns främst inom områden som automotive, telekom och logistik. Vi utvecklar våra kunders verksamhet som experter inom Java- och .NET-utveckling, mobila applikationer, systemarkitektur, projektledning, kravställning, databaser, testledning, inbyggda system, applikationssäkerhet och utbildning.<br />
+ 				<br />Vill du bli en av oss? Du är välkommen att höra av dig till Hesho Ahmad, Rekryteringsansvarig på telefon: 031 – 7207204 eller skicka ett mail till: hesho.ahmad@adecco.se. Varmt välkommen!<br /> 
+              
             </div>
             </div>
             
@@ -886,7 +1091,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -906,7 +1111,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button"  data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button"  data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -927,7 +1132,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -950,7 +1155,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -971,7 +1176,7 @@
                 <a data-role="button" data-rel="back" data-transition="slide" data-icon="back" data-iconpos="left">
                     Back
                 </a>
-                <a data-role="button" data-transition="slide" href="#home" data-direction="reverse" data-icon="home" data-iconpos="right">
+                <a data-role="button" data-transition="slide" href="#home" data-icon="home" data-iconpos="right">
                     Home
                 </a>
             </div>
@@ -986,46 +1191,78 @@
  				<br />Quite soon professionals from all spectrum of the mobile industry joined the group. We are now about to embark on the next level an show that Gothenburg will go mobile.<br />
                </div>
             </div>
+   <!-- dialog ------------------------------------------>
 
-      <!-- dialog ------------------------------------------>
       
+
       <div data-role="page" id="dialog">
+
           <div data-role="header">
+
               <h1 id="dialogTitle" style="margin-left  : 20px;
+
                   margin-right : 0px;">Session Chooser</h1>
+
               
+
           </div>
+
           <div data-role="content">
+
               
+
               <div id="dialogContent"></div>
+
               
+
               <div id="dialogButtons">
+
                   
+
                   <!-------------- two buttons div for dialog  --------------------->
+
                   
+
                   <div class="ui-grid-a" id="twoButtons" style="display: none">
+
                       
+
                       <div class="ui-block-a">
+
                           <a id="yesButton" data-role="button" data-rel="back" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Yes</span></span></a> 
+
                       </div>
+
                       
+
                       <div class="ui-block-b">
+
                           <a id="noButton" data-role="button" data-rel="back" data-theme="c" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">No</span></span></a> 
+
                       </div>
+
                       
+
                   </div>
+
                   
+
                   <!------------------ one button div for dialog -------------------->
+
                   <div id="oneButton" style="display: none">
+
                       <a id="okButton" data-role="button" data-rel="back" data-theme="a" data-corners="true" data-shadow="true" data-iconshadow="true" data-inline="false" data-wrapperels="span" class="ui-btn ui-btn-up-a ui-shadow ui-btn-corner-all"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">Ok</span></span></a> 
+
                   </div>
+
                   <!-------------------------------------------------------------->
+
               </div>
+           </div>
+
               
+
           </div>
-          
-      </div>
-      
   </body>
 
 </html>

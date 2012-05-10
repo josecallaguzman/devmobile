@@ -16,21 +16,20 @@
  specific language governing permissions and limitations
  under the License.
  */
-
 //
-//  MainViewController.h
+//  main.m
 //  testCodova170
 //
 //  Created by José Calla Guzmán on 2012-05-10.
 //  Copyright Chalmers 2012. All rights reserved.
 //
 
-#ifdef CORDOVA_FRAMEWORK
-    #import <Cordova/CDVViewController.h>
-#else
-    #import "CDVViewController.h"
-#endif
+#import <UIKit/UIKit.h>
 
-@interface MainViewController : CDVViewController
-
-@end
+int main(int argc, char *argv[]) {
+    
+    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    int retVal = UIApplicationMain(argc, argv, nil, @"AppDelegate");
+    [pool release];
+    return retVal;
+}

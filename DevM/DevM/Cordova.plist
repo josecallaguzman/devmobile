@@ -21,7 +21,11 @@
 	<key>OpenAllWhitelistURLsInWebView</key>
 	<false/>
 	<key>ExternalHosts</key>
-	<array/>
+	<array>
+		<string>*.org</string>
+		<string>*.com</string>
+		<string>*.se</string>
+	</array>
 	<key>Plugins</key>
 	<dict>
 		<key>Compass</key>

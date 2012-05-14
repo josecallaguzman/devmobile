@@ -1,11 +1,12 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-                          
-                          var myS1 = document.getElementById('MYSESSION 1');
-                          var myS2 = document.getElementById('MYSESSION 2');
-                          var myS3 = document.getElementById('MYSESSION 3');
-                          var myS4 = document.getElementById('MYSESSION 4');
-                          var myS5 = document.getElementById('MYSESSION 5');
+
+                          var myS0 = document.getElementById('MYSESSION0');
+                          var myS1 = document.getElementById('MYSESSION1');
+                          var myS2 = document.getElementById('MYSESSION2');
+                          var myS3 = document.getElementById('MYSESSION3');
+                          var myS4 = document.getElementById('MYSESSION4');
+                          var myS5 = document.getElementById('MYSESSION5');
                           
                           var dialogVar = "Empty";
                           var dialogVarElem = document.createElement('div');
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
                           dialogContent.removeChild( dialogContent.lastChild );                          
                           
                           if(myS.innerHTML.match(/NA/gi)){
-                          dialogContent.appendChild(document.createTextNode("Do you want to add " + newChoice + "to your agenda?"));                
+                          dialogContent.appendChild(document.createTextNode("Do you want to add " + newChoice + " to your agenda?"));                
                           
                           var twoButtons = document.getElementById('twoButtons');
                           twoButtons.setAttribute('style','display:');
@@ -57,134 +58,160 @@ document.addEventListener('DOMContentLoaded', function () {
                           
                           }
                           
-                          document.getElementById('SESSION 1-A').
+                          document.getElementById('SESSION 0-bra').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 1 for Android";
+                                           dialogVar = "session 0 in Brännö";
+                                           sessionChooser(myS0, dialogVar);
+                                           return false;
+                                           }, false);
+                          document.getElementById('SESSION 1-sal').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "session 1 in Saltö";
                                            sessionChooser(myS1, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 1-iOS').
+                          document.getElementById('SESSION 1-ell').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 1 for iOS";
+                                           dialogVar = "session 1 in Ellös";
                                            sessionChooser(myS1, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 1-WP').
+                          document.getElementById('SESSION 1-bra').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 1 for Windows Phone";
+                                           dialogVar = "session 1 in Brännö";
                                            sessionChooser(myS1, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 1-CP').
+                          document.getElementById('SESSION 1-asp').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 1 for Cross Platform";
+                                           dialogVar = "session 1 in Asperö";
                                            sessionChooser(myS1, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 2-A').
+                          document.getElementById('SESSION 1-kon').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 2 for Android";
+                                           dialogVar = "session 1 in Kongressalen";
+                                           sessionChooser(myS1, dialogVar);
+                                           return false;
+                                           }, false);
+                          document.getElementById('SESSION 2-sal').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "session 2 in Saltö";
                                            sessionChooser(myS2, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 2-iOS').
+                          document.getElementById('SESSION 2-ell').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 2 for iOS";
+                                           dialogVar = "session 2 in Ellös";
                                            sessionChooser(myS2, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 2-WP').
+                          document.getElementById('SESSION 2-bra').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 2 for Windows Phone";
+                                           dialogVar = "session 2 in Brännö";
                                            sessionChooser(myS2, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 2-CP').
+                          document.getElementById('SESSION 2-asp').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 2 for Cross Platform";
+                                           dialogVar = "session 2 in Asperö";
                                            sessionChooser(myS2, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 3-A').
+                          document.getElementById('SESSION 2-kon').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 3 for Android";
+                                           dialogVar = "session 2 in Kongressalen";
+                                           sessionChooser(myS2, dialogVar);
+                                           return false;
+                                           }, false);
+                          document.getElementById('SESSION 3-sal').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "session 3 in Saltö";
                                            sessionChooser(myS3, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 3-iOS').
+                          document.getElementById('SESSION 3-ell').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 3 for iOS";
+                                           dialogVar = "session 3 in Ellös";
                                            sessionChooser(myS3, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 3-WP').
+                          document.getElementById('SESSION 3-bra').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 3 for Windows Phone";
+                                           dialogVar = "session 3 in Brännö";
                                            sessionChooser(myS3, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 3-CP').
+                          document.getElementById('SESSION 3-asp').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 3 for Cross Platform";
+                                           dialogVar = "session 3 in Asperö";
                                            sessionChooser(myS3, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 4-A').
+                          document.getElementById('SESSION 3-kon').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 4 for Android";
+                                           dialogVar = "session 3 in Kongressalen";
+                                           sessionChooser(myS3, dialogVar);
+                                           return false;
+                                           }, false);
+                          document.getElementById('SESSION 4-sal').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "session 4 in Saltö";
                                            sessionChooser(myS4, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 4-iOS').
+                          document.getElementById('SESSION 4-ell').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 4 for iOS";
+                                           dialogVar = "session 4 in Ellös";
                                            sessionChooser(myS4, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 4-WP').
+                          document.getElementById('SESSION 4-bra').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 4 for Windows Phone";
+                                           dialogVar = "session 4 in Brännö";
                                            sessionChooser(myS4, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 4-CP').
+                          document.getElementById('SESSION 4-asp').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 4 for Cross Platform";
+                                           dialogVar = "session 4 in Asperö";
                                            sessionChooser(myS4, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 5-A').
+                          document.getElementById('SESSION 4-kon').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 5 for Android";
+                                           dialogVar = "session 4 in Kongressalen";
+                                           sessionChooser(myS4, dialogVar);
+                                           return false;
+                                           }, false);
+                          document.getElementById('SESSION 5-sal').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "session 5 in Saltö";
+                                           sessionChooser(myS5, dialogVar);
+                                           return false;
+                                           }, false);   
+                          document.getElementById('SESSION 5-asp').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "session 5 in Asperö";
                                            sessionChooser(myS5, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 5-iOS').
+                          document.getElementById('SESSION 5-kon').
                           addEventListener('click', function (evt) {
-                                           dialogVar = "session 5 for iOS";
+                                           dialogVar = "session 5 in Kongressalen";
                                            sessionChooser(myS5, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 5-WP').
-                          addEventListener('click', function (evt) {
-                                           dialogVar = "session 5 for Windows Phone";
-                                           sessionChooser(myS5, dialogVar);
-                                           return false;
-                                           }, false);
-                          document.getElementById('SESSION 5-CP').
-                          addEventListener('click', function (evt) {
-                                           dialogVar = "session 5 for Cross Platform";
-                                           sessionChooser(myS5, dialogVar);
-                                           return false;
-                                           }, false);
-                          
+                         
                           
                           var l = window.localStorage.length;
                           var i = 0;
                           var storedListName;
                           function addNewListItem(newItem) {
 
-                          if(newItem.match(/1/gi)){
+                          if(newItem.match(/0/gi)){
+                          myS0.innerHTML = newItem;
+                          }else if(newItem.match(/1/gi)){
                           myS1.innerHTML = newItem;
                           }else if(newItem.match(/2/gi)){
                           myS2.innerHTML = newItem;

@@ -1,11 +1,25 @@
 .ui-bar-d{
-    height:170px;
+    height:140px;
     text-align:center;
 }
 
 .ui-bar-b{
     height:20px;
     text-align:center;
+}
+
+.ui-title {
+    margin: 0.6em 85px 0.8em 110px !important;
+    /*text-align:left !important;*/
+}
+
+.ui-dialog .ui-header {
+    text-align: center !important;
+}
+
+.ui-dialog .ui-header h1{
+    margin-left: 0px !important;
+    margin-right:0px !important;
 }
 
 .title{
@@ -24,4 +38,18 @@
 .party{
     height:40px;
     text-align:center;
+}
+
+.myagenda{
+    height:100px;
+    text-align:center;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+.ui-block-b {
+    margin-bottom: 2px;
+    margin-top: 2px
 }

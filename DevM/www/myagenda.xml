@@ -1,0 +1,33 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE myagenda[
+    <!ELEMENT myagenda (s0, s1, s2, s3, s4, s5)>
+    <!ELEMENT s0 (#PCDATA)>
+    <!ELEMENT s1 (#PCDATA)>
+    <!ELEMENT s2 (#PCDATA)>
+    <!ELEMENT s3 (#PCDATA)>
+    <!ELEMENT s4 (#PCDATA)>
+    <!ELEMENT s5 (#PCDATA)>
+    
+]>
+
+<myagenda>
+    <s0>
+        &lt;a id=&quot;MYSESSION0&quot; data-role=&quot;none&quot;&gt;NA&lt;/a&gt;
+    </s0>
+    <s1>
+        &lt;a id=&quot;MYSESSION1&quot; data-role=&quot;none&quot;&gt;NA&lt;/a&gt;
+    </s1>
+    <s2>
+        &lt;a id=&quot;MYSESSION2&quot; data-role=&quot;none&quot;&gt;NA&lt;/a&gt;
+    </s2>
+    <s3>
+        &lt;a id=&quot;MYSESSION3&quot; data-role=&quot;none&quot;&gt;NA&lt;/a&gt;
+    </s3>
+    <s4>
+        &lt;a id=&quot;MYSESSION4&quot; data-role=&quot;none&quot;&gt;NA&lt;/a&gt;
+    </s4>
+    <s5>
+        &lt;a id=&quot;MYSESSION5&quot; data-role=&quot;none&quot;&gt;NA&lt;/a&gt;
+    </s5>
+    
+</myagenda>

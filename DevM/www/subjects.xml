@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<!DOCTYPE subjects [
+	<!ELEMENT subjects (subject*)>
+		<!ELEMENT subject (id, title, info)>
+			<!ELEMENT id (#PCDATA)>
+			<!ELEMENT title (#PCDATA)>
+			<!ELEMENT info (#PCDATA)>
+]>
+
+<subjects>
+
+	<subject>
+		<id>top11</id>
+		<title>Keynote: Top 11 Trends for Enterprise Mobile</title>
+		<info>&lt;h2&gt;Keynote: Top 11 Trends for Enterprise Mobile&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#erwan&quot; &gt;Erwan Paccard&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;While "top 10" lists are normally reserved for end of the year reviews or beginning of the year predictions, the area of mobile enablement for enterprises is moving so quickly that it deserves a mid-year look, with a bonus trend added for this hot topic. In this session, we'll look at how the mobile world has changed in the last six months and what we're likely to see over the next year. Along the way we'll examine mobile app development, device management, security, interoperability, standards, and where you might place your bets to have a mobile platform that can take you into the middle of the decade.&lt;br /&gt;
+                </info>
+	</subject>
+	
+	<subject>
+		<id>sanna</id>
+		<title>Så når du ut med din app</title>
+		<info>&lt;h2&gt;Så når du ut med din app&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#jonatan&quot; &gt;Jonatan Redvik&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Vad gör du för att din app ska synas? Apple App Store och Google Play har hundratusentals appar och om man inte snabbt när topplistorna blir appen lätt en flopp. Jonatan pratar om hur man utvärderar alternativa marknadsplatser, och marknadsför en app via bland annat sociala medier.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in Swedish&lt;br /&gt;		
+		</info>
+	</subject>
+	
+	<subject>
+		<id>mobcross</id>
+		<title>Mobile cross-platform development with JQuery Mobile</title>
+		<info>&lt;h2&gt;Mobile cross-platform development with JQuery Mobile&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#jorgenb&quot; &gt;Jörgen Bengtsson&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;&lt;a href=&quot;#johanh&quot; &gt;Johan Holm&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Cross-platform development is hard at best when going for an all native approach. But can development be made easier going the "web-way"? And will these web applications measure up against native apps? One of many shortcuts to create a good user mobile web app experience is to use readymade frameworks. One of the better ones is JQuery Mobile, a touch-optimized web framework for Smartphones and Tablets. We will show how relatively easy it is to get started with web application development using the JQuery Mobile framework. We will draw examples and lessons-learned from our own experience developing web applications.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in Swedish&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>soyou</id>
+		<title>So you have the greatest idea for the Next Big Hit Windows Phone Game?</title>
+		<info>&lt;h2&gt;So you have the greatest idea for the Next Big Hit Windows Phone Game?&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#mattiasl&quot; &gt;Mattias Larsson&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Dreaming of creating your own mobile game? Maybe you have the best game idea ever, but don't really know where to start? I will share my experience from creating the Windows Phone game "Badgers Rock" while guiding you through the game development process of a game using XNA. We will go all the way from the napkin note to the Windows Phone Marketplace. Where to start? What tools? What to consider along the way? How to avoid the pitfalls? And what if you also want to deploy the game to Xbox 360 or PC?&lt;br /&gt;
+		</info>
+	</subject>
+		
+	<subject>
+		<id>lowl</id>
+		<title>Low Latency Messaging for Mobile Apps - Or When HTTP and Push Messages Are Simply Not Enough</title>
+		<info>&lt;h2&gt;Low Latency Messaging for Mobile Apps - Or When HTTP and Push Messages Are Simply Not Enough&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#henriks&quot; &gt;Henrik Sjöstrand&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;How does the Facebook Messenger app achieve phone-to-phone messaging latency in the order of milliseconds instead of seconds? It uses the MQTT protocol.&lt;br /&gt;
+                &lt;br /&gt;In this session we look at the MQTT protocol developed by IBM and recently donated to open source Eclipse Foundation. Using this protocol your mobile apps can achieve secure, reliable two-way communication without killing your battery or wasting your precious bandwidth. And it's open source!&lt;br /&gt; 
+		</info>
+	</subject>
+	
+	<subject>
+		<id>mobweb</id>
+		<title>Mobil webbutveckling med HTML5, CSS3 och JavaScript</title>
+		<info>&lt;h2&gt;Mobil webbutveckling med HTML5, CSS3 och JavaScript&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#perd&quot; &gt;Per Daleskog&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Skillnaden mellan vad som är möjligt att göra med mobilwebb jämfört med native applikationer minskar mer och mer. Man kan idag med enkla medel skapa en mobilwebb, men hur gör man, vad ska man tänka på och vad finns det för fallgropar? Det blir en fullspäckad session där vi tittar på ett koncentrat av nedanstående:&lt;br /&gt;
+				&lt;ul&gt;
+                    &lt;li&gt;Trender inom mobilwebb, mobile first, responsive design etc.&lt;/li&gt;
+                    &lt;li&gt;Grunder i mobilwebbutveckling&lt;/li&gt;
+                    &lt;li&gt;Mobile best practices&lt;/li&gt;
+                    &lt;li&gt;Mobil design och användarbarhet&lt;/li&gt;
+                    &lt;li&gt;Utvecklingsmiljöer/emulatorer&lt;/li&gt;
+                    &lt;li&gt;Mobilspecifika webbmöjligheter&lt;/li&gt;
+                    &lt;li&gt;jQuery, mobila webbramverk&lt;/li&gt;
+                    &lt;li&gt;Serverside/clientside browser detection&lt;/li&gt;
+                &lt;/ul&gt;
+                
+                &lt;br /&gt;This presentation will be given in Swedish&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>unmob</id>
+		<title>Understanding mobile design patterns</title>
+		<info>&lt;h2&gt;Understanding mobile design patterns&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#erikl&quot; &gt;Erik Larsson&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;This talk aimed at developers who want to better understand some best practices of mobile design patterns, we will discuss some fundamentals of designing great user experiences for mobile devices.&lt;br /&gt;
+                &lt;br /&gt;In this talk we will discuss:&lt;br /&gt;
+                &lt;br /&gt;How the natural constraints of mobile device usage patterns forces focused and simplified mobile experiences.&lt;br /&gt;
+                
+                &lt;ul&gt;
+                    &lt;li&gt;What effect small screen sizes has on the mobile experience&lt;/li&gt;
+                    &lt;li&gt;What effect time constraints (there are drastic change in behaviors on how a mobile app and a desktop app are used) has on mobile app experiences&lt;/li&gt;
+                    &lt;li&gt;The effect that location and the fact that a mobile app is, well mobile, has on the user experience&lt;/li&gt;
+                &lt;/ul&gt;
+                
+                &lt;br /&gt;How the technical capabilities of smartphones and touch interfaces enables drastically different user input patterns.&lt;br /&gt;
+                
+                &lt;ul&gt;
+                    &lt;li&gt;Possibilites of the touch interface and direct manipulation&lt;/li&gt;
+                    &lt;li&gt;Possibilites of location detection&lt;/li&gt;
+                &lt;/ul&gt;
+                
+                &lt;br /&gt;How to organize the design of mobile applications and align mobile behaviors with user needs&lt;br /&gt;
+                
+                &lt;ul&gt;
+                    &lt;li&gt;Quick run through four typical mobile use cases&lt;/li&gt;
+                    &lt;li&gt;Importance of emphasizing content, not navigation&lt;/li&gt;
+                    &lt;li&gt;Best practices for designing relevant navigational options&lt;/li&gt;
+                &lt;/ul&gt;
+                
+                &lt;br /&gt;How to design mobile applications for appropriate touch interaction&lt;br /&gt;
+                
+                &lt;ul&gt;
+                    &lt;li&gt;Best practices for designing targets that are correctly sized and/or positioned for touch.&lt;/li&gt;
+                    &lt;li&gt;How to connect touch gestures to the users objectives and the apps objectives&lt;/li&gt;
+                    &lt;li&gt;How to design better data input experiences for touch&lt;/li&gt;
+                &lt;/ul&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>titan</id>
+		<title>Titanium Mobile - A brief overview and introduction to a cross platform framework</title>
+		<info>&lt;h2&gt;Titanium Mobile : A brief overview and introduction to a cross platform framework&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#jorgen&quot; &gt;Jörgen Buder&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Titanium offers what most other frameworks don't. A simple language that almost anybody knows or can learn quickly, a cross compilation to native code that keeps performance to a maximum and a cross platform strategy that makes best of breed apps, without ever being noticed. Titanium Mobile makes it easy to be productive and have a vast library of features and UI objects that can create any type of mobile application. Titanium also offers extendibility and open source licenses so that we all can adapt what we want.&lt;br /&gt; 
+		</info>
+	</subject>
+	
+	<subject>
+		<id>sensa</id>
+		<title>Cross-platform development with HTML5 and Sencha Touch</title>
+		<info>&lt;h2&gt;Cross-platform development with HTML5 and Sencha Touch&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#conny&quot; &gt;Conny Svensson&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;HTML5 blir snabbare och snabbare med varje ny version av de mobila operativsystemen, fler funktioner läggs till och möjligheterna att göra ett tilltalande gränssnitt ökar. Flera HTML5 ramverk finns på marknaden som är fokuserade för mobil webbapp utveckling. Ett av dessa är Sencha Touch som precis har släppts i en ny uppdaterad version 2. Ramverket är ett av de mognaste och mest kompletta för att skriva HTML5 lösningar för mobiler som ger en app känsla med en strukturerad MVC modell. Sencha Designer är en produkt för att visuellt bygga upp sin app, men den genererar inte bara gränssnittet utan även modeller och kontrollogik.  Det innebär att Sencha Designer kan ses som en IDE för HTML5 Web app utveckling, både för att snabbt ta fram gränssnitt men även för att skriva kompletta appar.&lt;br /&gt; 
+                &lt;br /&gt;I senaste Sencha Touch 2 så finns även möjligheten att paketera som en native app genom Senchas egna wrapper eller mer traditionellt med PhoneGap. Adobe har precis släppt ett nytt verktyg för att remote debugga HTML5 web appar på mobiler som heter Adobe Shadow. Tillsammans ger dessa verktyg en komplett miljö för att skriva professionella cross-platform appar i HTML5. Presentationen kommer vissa hur man arbetar med dessa verktyg och gå igenom Sencha Touch 2 ramverket och dess principer.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>anapp</id>
+		<title>An app is not enough</title>
+		<info>&lt;h2&gt;An app is not enough&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#joakim&quot; &gt;Joakim Kemeny&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Native or web? That seems to be one of the biggest questions on the market right now. But what do you do when an app is not enough? How can you create something that works great on a 4? phone as well as on a 60? television?&lt;br /&gt;
+                &lt;br /&gt;Responsive web design can be the answer for you and it's one of the hottest trend in web design right now. Joakim will use this technique to give you an understanding of how to design and code web applications for 2012 and beyond. The result will be shown in a demo that will possibly change the way you think about the web.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>ending</id>
+		<title>Ending the Web Versus Native Debate</title>
+		<info>&lt;h2&gt;Ending the Web Versus Native Debate&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#kevin&quot; &gt;Kevin Whinnery&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;The "web versus native" debate rages on in 2012.  Build for native platforms?  You're locking yourself in to closed platforms and non-portable skill sets, all the while duplicating development efforts.  Build for the web?  You're sacrificing the performance, user experience, and tight platform integration that native apps provide.  When developers are forced to choose between these two options, no one really wins.&lt;br /&gt;
+                &lt;br /&gt;Cross-platform toolsets abound that try and address this problem - but often they fall into the "write once, suck everywhere" trap, shoe-horning an HTML page, OpenGL rendering context, or a Flash runtime into a thin native shell with a few dozen native API hooks.  Many don't allow you to build for the web at all.  But building cross-platform is pointless unless you can deliver amazing apps and meet user expectations on every platform.&lt;br /&gt;
+                &lt;br /&gt;In this presentation, we will explore how Titanium Mobile is solving cross-platform differently.  Titanium provides a JavaScript "meta API" over the top of native APIs for UI, device APIs and sensors, user data, and platform-specific features.  Fair warning - Titanium isn't "write once, run everywhere", nor is it intended to be.  But you'll find out how you can get 80% code re-use, while providing a platform-specific user experience and integrations where that makes sense.&lt;br /&gt;
+                &lt;br /&gt;After a brief architectural overview, we will dive into a production JavaScript codebase which produces great native apps with tight platform integration, as well as a rich mobile web application.  We will talk about code structure and patterns for code reuse, and situations where it makes sense to write platform-specific code (and how to do it in Titanium).  Examples will use the Titanium Studio IDE to run projects using the actual native toolchains (though we have CLI tooling also if Eclipse isn't your bag).&lt;br /&gt;
+                &lt;br /&gt;This presentation will be focused on code walkthroughs more than high-level concepts, so prior JavaScript experience and some exposure to the CommonJS module specification will be helpful. No prior Titanium experience is assumed, but having "hello world" level exposure will also be helpful.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>secm</id>
+		<title>Securing mobile applications</title>
+		<info>&lt;h2&gt;Securing mobile applications&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#ulfl&quot; &gt;Ulf Larsson&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;This talk, we look at some common security pitfalls in mobile application development. We also take a peek inside the iGoat training application, an OWASP project aimed at educating mobile developers in secure programming. Finally, we look briefly on how to you can assess the security of your backend by using burp proxy to intercept and modify your mobile phone's traffic in transit.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>momo</id>
+		<title>Modern Mobile Web Design with Maquetta and Dojo/Dojo Mobile</title>
+		<info>&lt;h2&gt;Modern Mobile Web Design with Maquetta and Dojo/Dojo Mobile&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#matthew&quot; &gt;Matthew Perrins&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;This presentation will walk through the full lifecycle of development from wireframe to working solution using the IBM tools and solutions available today for Dojo Mobile solutions. It will take a use case and implement a design using the Maquetta tooling and then see how this design can flow into an Eclipse or Rapid Application Development (RAD)-based development tooling. It will then integrate a number of representational state transfer (REST) services using the new IBM WebSphere Application Server rv8.Next Liberty Profile. This session will help existing and new developers understand the technical detail required to build compelling user interfaces with Dojo Mobile&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>wpbest</id>
+		<title>Windows Phone Development - Best Practices</title>
+		<info>&lt;h2&gt;Windows Phone Development - Best Practices&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#johanl&quot; &gt;Johan Lindfors&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Succeeding with an app for Windows Phone requires thorough understanding of both the technical platform as well as how to make customers aware of its existence. With several years of experience in developing apps for Windows Phone with multiple different clients, Johan Lindfors will share recommendations and success stories that will help you succeed and compete in the ever growing Marketplace. Topics includes visual design and user experience, development processes and methods, patterns and frameworks and last but not least some tips for an overall better performance!&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>phonegap</id>
+		<title>Getting started with Phonegap</title>
+		<info>&lt;h2&gt;Getting started with Phonegaps&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#mihai&quot; &gt;Mihai Corlan&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;PhoneGap is the open source platform for developing mobile applications that run across different devices and operating systems. If this is not cool enough then let me add one more thing: you code using JavaScript, HTML, and CSS.&lt;br /&gt;
+                &lt;br /&gt;In this session you will find out what PhoneGap is and how you can use it to build mobile applications.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>mapp</id>
+		<title>Mobile App vs Mobile Site</title>
+		<info>&lt;h2&gt;Mobile App vs Mobile Site &lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#patrik&quot; &gt;Patrik Malmquist&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;When developing solutions for mobile users you need to have the right tool for the right situation. Should you develop a native app in one or several platforms like for example iOS, Android or Windows Phone 7 or should you adapt your website for mobile devices or is perhaps the best solution to use a hybrid of the two? This session analyzes the pros and cons of different solutions from different perspectives like functional requirements, performance, user experience, compatibility, cost and maintenance.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>appres</id>
+		<title>En applikations resa från Windows Phone till Windows 8</title>
+		<info>&lt;h2&gt;En applikations resa från Windows Phone till Windows 8&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#andhammar&quot; &gt;Andreas Hammar&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;&lt;a href=&quot;#hakan&quot; &gt;Håkan Reis&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Vad krävs för att ta en befintlig Windows Phone-applikation till Windows 8? Kan vi jobba med koden vi har eller gör vi bäst i att börja om?&lt;br /&gt; 
+                &lt;br /&gt;Vi kommer gå igenom en konvertering, vilka problem man stöter på och hur man bäst jobbar runt dem. Framför allt ska vi försöka svara på frågan : hur bygger man sin Windows Phone-applikation så att den smidigt kan göras om till en Windows 8 Metro-applikation. Den här sessionen kommer ge nyttiga tips till er som vill konvertera och även till er som vill komma igång med Windows 8 Metro-utveckling.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in Swedish&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>intwin8</id>
+		<title>Introduktion till Windows 8 och Metro style apps</title>
+		<info>&lt;h2&gt;Introduktion till Windows 8 och Metro style apps&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#dag&quot; &gt;Dag König&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;&lt;a href=&quot;#danwei&quot; &gt;Danwei Tran Luciani&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;
+                &lt;br /&gt;Med nästa version av Windows ifrån Microsoft kommer många nya spännande funktioner och möjligheter. I denna session ger vi en överblick över nyheter som vi utvecklare är speciellt intresserade av: en ny programmeringsmodell; möjligheten att köra Windows på ARM, vilket möjliggör nya spännande formfaktorer; och Windows Store för att kunna distributera appar.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in swedish&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>wpdev</id>
+		<title>Windows Phone för utvecklare</title>
+		<info>&lt;h2&gt;Windows Phone för utvecklare&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#dag&quot; &gt;Dag König&lt;/a&gt;&lt;br /&gt;
+                
+                &lt;br /&gt;
+                &lt;br /&gt;Vad för funktioner kan man använda sig av för att göra appar i Windows Phone? Vad är det för några saker som är unika i den här plattformen och hur utnyttjar man dem? Vilka verktyg och resurser finns det för att hjälpa till i utvecklingen? Och andra viktiga frågor besvaras i denna session.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in swedish&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>mdesign</id>
+		<title>Skapa snygga appar i Metro design</title>
+		<info>&lt;h2&gt;Skapa snygga appar i Metro design&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#danwei&quot; &gt;Danwei Tran Luciani&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Med Windows Phone introducerades ett helt nytt designspråk som kallas Metro. Vi går igenom grundprinciperna för Metro-design och de guidelines som finns när det gäller grafik och animeringar. Vi kikar också på exempel på hur du kan få din app att stå ut ur mångden och hur du undviker vanliga certiferingsproblem när du lägger upp din app på Marketplace. I slutändan handlar allt om användarupplevelsen.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>amashups</id>
+		<title>Fun with Android Mashups</title>
+		<info>&lt;h2&gt;Fun with Android Mashups &lt;/h2&gt;
+                Presentation speakers: &lt;br /&gt;&lt;a href=&quot;#par&quot; &gt;Pär Sikö&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;&lt;a href=&quot;#martin&quot; &gt;Martin Gunnarsson&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Mashup is a combination of information and services from two unrelated sources, for example showing photos from Flickr on a map from OpenStreetMap. In this presentation we take the mashup one step further by combining rich Android user interfaces with different components and services available on the web, in order to create amazing programs that blur the line between application and web content.&lt;br /&gt;
+                &lt;br /&gt;The audience will learn how to load data from different sources, how to show web content in an Android application, and how to set up two-way communications between the Android application and JavaScript code in the web view.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in Swedish.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>gamedev</id>
+		<title>Game Development with Unity for Mobile Devices</title>
+		<info>&lt;h2&gt;Game Development with Unity for Mobile Devices&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#johan&quot; &gt;Johan Sanneblad&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Johan Sanneblad, Ph.D, has the past years developed and launched numerous mobile apps and games for Android and iOS using the game development platform Unity. In this presentation Johan will introduce tips and tricks and lessons learnt while creating games for a wide range of platforms and devices. Topics include Unity game architecture design, how to create one user interface layout and code for all different screen sizes and aspect ratios, asset management, code and memory optimization techniques, and much more. The seminar is useful for both experienced Unity developers and for novice programmers that want to dive into game development for mobile devices.&lt;br /&gt;
+		</info>
+	</subject>
+	
+	<subject>
+		<id>tackand</id>
+		<title>Tackling Android fragmentation</title>
+		<info>&lt;h2&gt;Tackling Android fragmentation&lt;/h2&gt;
+                Presentation speakers: &lt;br /&gt;&lt;a href=&quot;#glenn&quot; &gt;Glenn Richard Bech&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;The number of Android powered devices are sky rocketing. To reach larger audiences, developers want to create applications that are compatible with as many devices as possible.&lt;br /&gt;
+                &lt;br /&gt;Adoption of Ice cream sandwich is steady but slow. This results in developers having to cope with different android versions for years to come. The diversity of devices running the operating systems provide great choice and joy for consumers. On the other hand, screen sizes, aspect ratios and pixels densities vary dramatically and provide additional challenges for developers.&lt;br /&gt; 
+                &lt;br /&gt;The presentation will cover how to use fragments to achieve a high level of code reuse in the UI layer. The presentation will also cover how to use the Android compatibility package to build applications that can be installed, from a single APK to both phones and tablets. The topic will be explained using code, and a complete example of how to build a highly portable Android application will be given during the presentation.&lt;br /&gt;
+		</info>
+	</subject>
+    
+    <subject>
+		<id>vinnare</id>
+		<title>Bli en vinnare på företagsmarknaden med dina appar!</title>
+		<info>
+            &lt;h2&gt;Bli en vinnare på företagsmarknaden med dina appar!&lt;/h2&gt;
+            Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#mhansson&quot;&gt;Mattias Hansson&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
+            Dagens appstores är idag inte anpassade mot företagsmarknaden som har en rad andra krav:
+            &lt;br /&gt;
+            &lt;ul&gt;
+            &lt;li&gt;central inköpshantering av appar&lt;/li&gt;
+            &lt;li&gt;förenkla hantering av appar avseende inställningar, licensnyckel och distribution av appar&lt;/li&gt;
+            &lt;li&gt;övervakning av vem som laddat ned appen&lt;/li&gt;
+            &lt;li&gt;flexibel licensmodell&lt;/li&gt;
+            &lt;li&gt;inget stöd för kanalhantering där distributörer och återförsäljare finns med&lt;/li&gt;
+            &lt;li&gt;enklare att nå ut till sina kunder. En sökning på ”Telia” på Google Play resulterar i 73st träff. Vilken Telia app är det jag skall ha?&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;br /&gt;
+            Under seminariet kommer Mattias Hansson att gå igenom hur du lyckas med dina appar på företagsmarknaden. Mattias kommer även att demonstrera AppBoosters prisbelönta tjänst Mobile Application Distribution Platform (MADP) som är utvecklad för att förenkla för apputvecklare och företag att nå framgång med kommersiella appprojekt och företagsinterna appprojekt på företagsmarknaden.
+            &lt;br /&gt;
+            &lt;br /&gt;
+            AppBooster Sweden AB är an avknoppning av OptiCaller Software AB som framgångsrikt nyttjat denna plattform för att nå ut med sin mobila växel app ”OptiCaller” globalt i 18 länder till över 600st företag globalt.
+            &lt;br /&gt;
+            &lt;br /&gt;
+            Emtrace från Korea som är en av världens mest framgångsrika apputvecklings företag har utvecklat apparna Moxier Mail (mail app mot Microsoft Exchange som sålt i 10 miljoner exem) samt MECRM (CRM app för Microsoft Dynamic) har valt AppBooster MADP som distributionsplattform. Se press release: &lt;a href=&quot;http://mobile.reuters.com/article/2012/02/27/idUS122680+27-Feb-2012+MW20120227&quot; target=&quot;_blank&quot;&gt;http://www.reuters.com/article/&lt;/a&gt;
+            &lt;br /&gt;
+            &lt;br /&gt;
+            AppBooster Sweden AB har i stor konkurrens med andra startup vunnit utmärkelserna VinnNu och Venture Cup.
+        </info>
+	</subject>
+	
+	<!-- Reserve subjects-->
+	
+	<!--
+	<subject>
+		<id>spelapp</id>
+		<title>Spel och apputveckling Cross plattform</title>
+		<info>&lt;h2&gt;Spel och apputveckling Cross plattform&lt;/h2&gt;
+                Presentation speaker: &lt;br /&gt;&lt;a href=&quot;#andreask&quot; &gt;Andreas Kviby&lt;/a&gt;&lt;br /&gt;
+                &lt;br /&gt;Making apps and games for the mobile market using cross platform tools has been a true challenge for many years. Andreas Kviby have used tools like Titanium, Phonecap and others but have never been really blessed by them for use in creating both games and apps in the same environment. Then he stumbled upon Anscamobile and their tool Corona SDK and since then Andreas has created many apps, games and now a huge business success around the fact that he can always build cross platform. In this session Andreas will show on stage and live code and samples for creating apps, games with a lot of features and functions and deploy the apps and games live on stage to iPhone, iPad and Android devices. This session is a thrill for developers seeking a new and brilliant toolset to make their business a success towards cross platform markets.&lt;br /&gt;
+                &lt;br /&gt;This presentation will be given in Swedish&lt;br /&gt; 
+		</info>
+	</subject>
+	-->
+	
+</subjects>

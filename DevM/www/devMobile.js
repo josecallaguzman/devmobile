@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-                          
                           var myS0 = document.getElementById('MYSESSION0');
                           var myS1 = document.getElementById('MYSESSION1');
                           var myS2 = document.getElementById('MYSESSION2');
@@ -72,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function () {
                                            sessionChooser(myS1, dialogVar);
                                            return false;
                                            }, false);
-                          document.getElementById('SESSION 1-ell').
+                          /*document.getElementById('SESSION 1-ell').
                           addEventListener('click', function (evt) {
                                            dialogVar = "1_Ellös_Spel och apputveckling Cross plattform";
                                            sessionChooser(myS1, dialogVar);
                                            return false;
-                                           }, false);
+                                           }, false);*/
                           document.getElementById('SESSION 1-bra').
                           addEventListener('click', function (evt) {
                                            dialogVar = "1_Brännö_Mobile app vs. mobile site";
@@ -191,7 +190,13 @@ document.addEventListener('DOMContentLoaded', function () {
                                            dialogVar = "5_Saltö_En applikations resa från Windows Phone till Windows 8";
                                            sessionChooser(myS5, dialogVar);
                                            return false;
-                                           }, false);   
+                                           }, false); 
+                          document.getElementById('SESSION 5-ell').
+                          addEventListener('click', function (evt) {
+                                           dialogVar = "5_Ellös_Bli en vinnare på företagsmarknaden med dina appar!";
+                                           sessionChooser(myS5, dialogVar);
+                                           return false;
+                                           }, false);
                           document.getElementById('SESSION 5-asp').
                           addEventListener('click', function (evt) {
                                            dialogVar = "5_Asperö_Titanium Mobile – A brief overview and introduction to a cross platform framework";
@@ -213,36 +218,99 @@ document.addEventListener('DOMContentLoaded', function () {
                           
                           var splitStr2 = newItem.split("_");
                           
-                          if(newItem.match(/0/gi)){
+                          var itemKey;
+                          
+                          if(newItem.match(/0_/gi)){
                           myS0.innerHTML = "\"" + splitStr2[2] + "\"" + "<br />Room: " + splitStr2[1];
-                          }else if(newItem.match(/1/gi)){
+                          itemKey = "item." + 0;
+                          }else if(newItem.match(/1_/gi)){
                           myS1.innerHTML = "\"" + splitStr2[2] + "\"" + "<br />Room: " + splitStr2[1];
-                          }else if(newItem.match(/2/gi)){
+                          itemKey = "item." + 1;
+                          }else if(newItem.match(/2_/gi)){
                           myS2.innerHTML = "\"" + splitStr2[2] + "\"" + "<br />Room: " + splitStr2[1];
-                          }else if(newItem.match(/3/gi)){
+                          itemKey = "item." + 2;
+                          }else if(newItem.match(/3_/gi)){
                           myS3.innerHTML = "\"" + splitStr2[2] + "\"" + "<br />Room: " + splitStr2[1];
-                          }else if(newItem.match(/4/gi)){
+                          itemKey = "item." + 3;
+                          }else if(newItem.match(/4_/gi)){
                           myS4.innerHTML = "\"" + splitStr2[2] + "\"" + "<br />Room: " + splitStr2[1];
-                          }else if(newItem.match(/5/gi)){
+                          itemKey = "item." + 4;
+                          }else if(newItem.match(/5_/gi)){
                           myS5.innerHTML = "\"" + splitStr2[2] + "\"" + "<br />Room: " + splitStr2[1];
+                          itemKey = "item." + 5;
                           }
+                          
+                          window.localStorage.setItem(itemKey, newItem);
                           
                           }
                           
-                          for (i; i < l; i++) {
+                          /* Clear all subjects from before */
+                          var count=0;
+                          for (var s=0; s < l; s++) {
+                          storedListNameOld = window.localStorage.key(s);
+                          if (storedListNameOld.match(/^agenda[.]/)){
+                          count++;
+                            window.localStorage.setItem(window.localStorage.key(s), "nada");
+                          }
+                          }
+                          
+                          /* Adding availale subjects to local storage*/
+                          window.localStorage.setItem("agenda.1", "0_Brännö_Top 11 Trends for Enterprise Mobile");
+                          window.localStorage.setItem("agenda.2", "1_Saltö_Securing mobile applications");
+                          window.localStorage.setItem("agenda.3", "1_Brännö_Mobile app vs. mobile site");
+                          window.localStorage.setItem("agenda.4", "1_Asperö_Cross-platform development with HTML5 and Sencha Touch");
+                          window.localStorage.setItem("agenda.5", "1_Kongressalen_Windows Phone för utvecklare");
+                          window.localStorage.setItem("agenda.6", "2_Saltö_Så når du ut med din app");
+                          window.localStorage.setItem("agenda.7", "2_Ellös_Skapa snygga appar i Metro design");
+                          window.localStorage.setItem("agenda.8", "2_Brännö_An app is not enough");
+                          window.localStorage.setItem("agenda.9", "2_Asperö_So you have the greatest idea for the Next Big Hit Windows Phone Game?");
+                          window.localStorage.setItem("agenda.10", "2_Kongressalen_Having fun with Android mashups"); 
+                          window.localStorage.setItem("agenda.11", "3_Saltö_Understanding mobile design patterns");
+                          window.localStorage.setItem("agenda.12", "3_Ellös_Windows Phone Development - Best Practices");
+                          window.localStorage.setItem("agenda.13", "3_Brännö_Tackling Android fragmentation");
+                          window.localStorage.setItem("agenda.14", "3_Asperö_Ending the Web Versus Native Debate");
+                          window.localStorage.setItem("agenda.15", "3_Kongressalen_Mobile cross-platform development with JQuery Mobile");
+                          window.localStorage.setItem("agenda.16", "4_Saltö_Mobil webbutveckling med HTML5, CSS3 och JavaScript");
+                          window.localStorage.setItem("agenda.17", "4_Ellös_Game Development with Unity for Mobile Devices");
+                          window.localStorage.setItem("agenda.18", "4_Brännö_Low Latency Messaging for Mobile Apps - Or When HTTP and Push Messages Are Simply Not Enough");
+                          window.localStorage.setItem("agenda.19", "4_Asperö_Introduktion till Windows 8 och Metro style apps");
+                          window.localStorage.setItem("agenda.20", "4_Kongressalen_Getting Started with PhoneGap");
+                          window.localStorage.setItem("agenda.21", "5_Saltö_En applikations resa från Windows Phone till Windows 8");
+                          window.localStorage.setItem("agenda.22", "5_Ellös_Bli en vinnare på företagsmarknaden med dina appar!");
+                          window.localStorage.setItem("agenda.23", "5_Asperö_Titanium Mobile – A brief overview and introduction to a cross platform framework");
+                          window.localStorage.setItem("agenda.24", "5_Kongressalen_Modern Mobile Web Design with Maquetta and Dojo/Dojo Mobile");
+
+                          
+                          var l = window.localStorage.length;
+                          for (var i=0; i < l; i++) {
                           storedListName = window.localStorage.key(i);
-                          if (storedListName.match(/^item[.]/))
-                          addNewListItem(window.localStorage.getItem(storedListName));
+                          if (storedListName.match(/^item[.]/)){
+                          //alert("item: " + window.localStorage.getItem(storedListName));
+                            for (var j=0; j < l; j++) {
+                                //alert("j: " + j);
+                          
+                          storedListNameAgenda = window.localStorage.key(j);
+                           
+                            if (storedListNameAgenda.match(/^agenda[.]/)){
+                           
+                                if(window.localStorage.getItem(storedListName).match(window.localStorage.getItem(storedListNameAgenda))){
+                                    //alert("Found match: " + window.localStorage.getItem(storedListName) + " AND " + window.localStorage.getItem(storedListNameAgenda));
+                           
+                                    addNewListItem(window.localStorage.getItem(storedListName));
+
+                                }
+                           
+                            }
+                          }
+                          }
+                          
                           }
                           
                           document.getElementById('yesButton').
                           addEventListener('click', function (evt) {
                                            var newListValue = dialogVarElem.innerHTML;
-                                           
-                                           var itemKey = "item." + (window.localStorage.length + 1);
-                                           
+                                                                                      
                                            addNewListItem(newListValue);
-                                           window.localStorage.setItem(itemKey, newListValue);
                                            
                                            return false;
                                            }, false);

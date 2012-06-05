@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
                           dialogContent.removeChild( dialogContent.lastChild );                          
                           
                           var splitStr = newChoice.split("_");
-                          var splitExists = myS.innerText.split("\"");
+                          //var splitExists = myS.innerText.split("\"");
+                          var splitExists = myS.textContent.split("\"");
                           
                           if(myS.innerHTML.match(/NA/gi)){
                           dialogContent.appendChild(document.createTextNode("Do you want to add \"" + splitStr[2] + "\" to your agenda?"));                

@@ -43,7 +43,15 @@
             }
             </script>
         
-        <script type="text/javascript" charset="utf-8" src="http://devmobile.se/wp-content/uploads/2012/05/devMobile.js"></script>
+        <script type="text/javascript">
+            
+            var randomItem=new Date();
+            var url = "http://devmobile.se/wp-content/uploads/2012/05/devMobile.js";
+            url=url+'?random='+randomItem.getUTCMilliseconds();
+            
+            document.write("<script type=\"text/javascript\" charset=\"utf-8\" src=\"" + url +  "\"/>");
+        
+        </script>
         
         <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
         
@@ -135,7 +143,70 @@
         <title>PhoneGap</title>
         
     </head>  
-    <body onload="onLoad()">	
+    <body onload="onLoad()">
+        
+        <script type="text/javascript">
+            
+            var SERVER_URL = "http://devmobile.se/wp-content/uploads/2012/05/";
+            
+            // space before XML contents
+            /*for(var k=0;k<50;k++){
+                document.write("<br />");
+            }*/
+            
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            
+            document.write("<div id=\"XMLContent\" style=\"display:none\">");
+
+            loadXML("agenda.xml");
+            loadXML("speakers.xml");
+            loadXML("subjects.xml");
+            loadXML("sponsors.xml");
+            loadXML("contributors.xml");
+            
+            document.write("</div>");
+            
+            function loadXML(XMLfile){
+                var randomItem=new Date();
+                var url = SERVER_URL + XMLfile;
+                url=url+'?random='+randomItem.getUTCMilliseconds();
+                
+                xmlhttp.open("GET", url, false);
+                xmlhttp.send(); 
+                
+                xmlDoc=xmlhttp.responseXML; 
+                
+                traverse(xmlDoc);
+                
+            }
+            
+            
+            
+            function traverse(tree) {
+                if(tree.hasChildNodes()) {
+                    document.write("<" + tree.nodeName + ">");
+                    var nodes=tree.childNodes.length;
+                    for(var i=0; i<tree.childNodes.length; i++)
+                    traverse(tree.childNodes(i));
+                    document.write("</" + tree.nodeName + ">");
+                }
+                else{
+					var string = "" + tree.nodeValue;
+					string = string.replace(new RegExp('&','g'),'&amp;');
+					string = string.replace(new RegExp('<','g'),'&lt;');
+					string = string.replace(new RegExp('>','g'),'&gt;');
+					document.write(string);	
+                }            
+            }
+            
+            </script>
         
         <!--home---------------------------------------------------------->
         <div data-role="page" id="home" >
@@ -224,28 +295,9 @@
             <div data-role="content">   
                 
                 <script type="text/javascript" charset="utf-8">
-                    if (window.XMLHttpRequest)
-                    {// code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp=new XMLHttpRequest();
-                    }
-                    else
-                    {// code for IE6, IE5
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    
-                    var randomItem=new Date();
-                    var url = "http://devmobile.se/wp-content/uploads/2012/05/speakers.xml";
-                    url=url+'?random='+randomItem.getUTCMilliseconds();
-                    
-                    xmlhttp.open("GET",url,false);
-                    xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                        showAlert();
-                        
-                        window.location.reload();}
-                    xmlDoc=xmlhttp.responseXML; 
-                    
+                                        
                     document.write("<div data-role=\"controlgroup\" data-divider-theme=\"a\">");
-                    var x=xmlDoc.getElementsByTagName("speaker");
+                    var x=document.getElementsByTagName("speaker");
                     for (i=0;i<x.length;i++)
                     { 
                         document.write("<a href=\"#");
@@ -276,29 +328,9 @@
             <div data-role="content"> 
                 
                 <script type="text/javascript" charset="utf-8">
-                    if (window.XMLHttpRequest)
-                    {// code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp=new XMLHttpRequest();
-                    }
-                    else
-                    {// code for IE6, IE5
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    
-                    var randomItem=new Date();
-                    var url = "http://devmobile.se/wp-content/uploads/2012/05/subjects.xml";
-                    url=url+'?random='+randomItem.getUTCMilliseconds();
-                    
-                    xmlhttp.open("GET",url,false);
-                    xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                        showAlert();
-                        
-                        window.location.reload();}
-                    
-                    xmlDoc=xmlhttp.responseXML; 
                     
                     document.write("<div data-role=\"controlgroup\" data-divider-theme=\"a\">");
-                    var y=xmlDoc.getElementsByTagName("subject");
+                    var y=document.getElementsByTagName("subject");
                     for (i=0;i<y.length;i++)
                     { 
                         document.write("<a href=\"#");
@@ -325,29 +357,10 @@
             </div>
             <div data-role="content">    
                 
-                <script type="text/javascript">
-                    if (window.XMLHttpRequest)
-                    {// code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp=new XMLHttpRequest();
-                    }
-                    else
-                    {// code for IE6, IE5
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    
-                    var randomItem=new Date();
-                    var url = "http://devmobile.se/wp-content/uploads/2012/05/sponsors.xml";
-                    url=url+'?random='+randomItem.getUTCMilliseconds();
-                    
-                    xmlhttp.open("GET",url,false);
-                    xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                        showAlert();
-                        
-                        window.location.reload();}
-                    xmlDoc=xmlhttp.responseXML; 
+                <script type="text/javascript">                    
                     
                     document.write("<div data-role=\"controlgroup\" data-divider-theme=\"a\">");
-                    var y=xmlDoc.getElementsByTagName("sponsor");
+                    var y=document.getElementsByTagName("sponsor");
                     for (i=0;i<y.length;i++)
                     { 
                         document.write("<a href=\"#");
@@ -361,7 +374,7 @@
                         document.write("</a>");
                     }
                     document.write("</div>");
-                    </script>
+                </script>
                 
             </div>
         </div>   
@@ -379,28 +392,9 @@
             <div data-role="content">
                 
                 <script type="text/javascript">
-                    if (window.XMLHttpRequest)
-                    {// code for IE7+, Firefox, Chrome, Opera, Safari
-                        xmlhttp=new XMLHttpRequest();
-                    }
-                    else
-                    {// code for IE6, IE5
-                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                    }
-                    
-                    var randomItem=new Date();
-                    var url = "http://devmobile.se/wp-content/uploads/2012/05/contributors.xml";
-                    url=url+'?random='+randomItem.getUTCMilliseconds();
-                    
-                    xmlhttp.open("GET",url,false);
-                    xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                        showAlert();
-                        
-                        window.location.reload();}
-                    xmlDoc=xmlhttp.responseXML; 
                     
                     document.write("<div data-role=\"controlgroup\" data-divider-theme=\"a\">");
-                    var y=xmlDoc.getElementsByTagName("contributor");
+                    var y=document.getElementsByTagName("contributor");
                     for (i=0;i<y.length;i++)
                     { 
                         document.write("<a href=\"#");
@@ -442,192 +436,111 @@
                 
                 <div class="ui-grid-a">
                     
-                    
                     <!-- ROW 0----------------------------------------------- -->          	
                     
                     <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-a title"  ><strong>Program</strong></div>
+                        <div class="ui-bar ui-bar-a title" ><strong>Program</strong></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 1----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
                     </div>
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-d myagenda" >13.00&ndash;14.00<br />
-                            <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-                                
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/myagenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("myagenda");
-                                for (i=0;i<y.length;i++)
-                                { 
-                                    document.write(y[i].getElementsByTagName("s0")[0].childNodes[0].nodeValue);
-                                }
-                                </script>
-                            
-                        </div>
+                        <div class="ui-bar ui-bar-d myagenda" >13.00&ndash; 14.00<br /><a id="MYSESSION0" data-role="none">NA</a></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 2----------------------------------------------- -->
                     
-                    <div class="ui-block-a" style="width:0%">                        
+                    <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-d myagenda" >14.10&ndash;15.00<br />
-                            <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-                                
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/myagenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("myagenda");
-                                for (i=0;i<y.length;i++)
-                                { 
-                                    document.write(y[i].getElementsByTagName("s1")[0].childNodes[0].nodeValue);
-                                }
-                                </script>
-                            
-                        </div>
+                        <div class="ui-bar ui-bar-d myagenda" >14.10&ndash; 15.00<br /><a id="MYSESSION1" data-role="none">NA</a></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 3----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
                         <div class="ui-bar ui-bar-b" >BREAK</div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 4----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-d myagenda" >15.30&ndash;16.20<br />
-                            
-                            <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-                                
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/myagenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("myagenda");
-                                for (i=0;i<y.length;i++)
-                                { 
-                                    document.write(y[i].getElementsByTagName("s2")[0].childNodes[0].nodeValue);
-                                }
-                                </script>
-                        </div>
+                        <div class="ui-bar ui-bar-d myagenda" >15.30&ndash; 16.20<br /><a id="MYSESSION2"data-role="none">NA</a></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 5----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-d myagenda" >16.30&ndash;17.20<br />
-                            <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-                                
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/myagenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("myagenda");
-                                for (i=0;i<y.length;i++)
-                                { 
-                                    document.write(y[i].getElementsByTagName("s3")[0].childNodes[0].nodeValue);
-                                }
-                                </script>
-                        </div>
+                        <div class="ui-bar ui-bar-d myagenda" >16.30&ndash; 17.20<br /><a id="MYSESSION3"data-role="none">NA</a></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 6----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
@@ -635,96 +548,59 @@
                         
                     </div>
                     
+                    
+                    
                     <!-- ROW 7----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-d myagenda" >17.50&ndash;18.40<br />
-                            
-                            <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-                                
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/myagenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("myagenda");
-                                for (i=0;i<y.length;i++)
-                                { 
-                                    document.write(y[i].getElementsByTagName("s4")[0].childNodes[0].nodeValue);
-                                }
-                                </script>
-                        </div>
+                        <div class="ui-bar ui-bar-d myagenda" >17.50&ndash; 18.40<br /><a id="MYSESSION4"data-role="none">NA</a></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 8----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-d myagenda" >18.50&ndash;19.40<br />
-                            <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
-                                
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/myagenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("myagenda");
-                                for (i=0;i<y.length;i++)
-                                { 
-                                    document.write(y[i].getElementsByTagName("s5")[0].childNodes[0].nodeValue);
-                                }
-                                </script>
-                        </div>
+                        <div class="ui-bar ui-bar-d myagenda" >18.50&ndash; 19.40<br /><a id="MYSESSION5"data-role="none">NA</a></div>
                         
                     </div>
+                    
+                    
                     
                     <!-- ROW 9----------------------------------------------- -->
                     
                     <div class="ui-block-a" style="width:0%">
+                        
+                        
                     </div>
+                    
+                    
                     
                     <div class="ui-block-b" style="width:100%">
                         
-                        <div class="ui-bar ui-bar-b party" >19.40&ndash;21.00<br />PARTY</div>
+                        <div class="ui-bar ui-bar-b party" >19.40&ndash; 21.00<br />PARTY</div>
                         
                     </div>
-                </div>
+                    
+                    
+                </div> <!-- end ui-grid -->
                 
             </div> <!-- end content -->
         </div> <!-- end page -->
@@ -732,27 +608,8 @@
         <!--SPEAKERS---------------------------------------------------------->        
         
         <script type="text/javascript">
-            if (window.XMLHttpRequest)
-            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {// code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
             
-            var randomItem=new Date();
-            var url = "http://devmobile.se/wp-content/uploads/2012/05/speakers.xml";
-            url=url+'?random='+randomItem.getUTCMilliseconds();
-            
-            xmlhttp.open("GET",url,false);
-            xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                showAlert();
-                
-                window.location.reload();}
-            xmlDoc=xmlhttp.responseXML; 
-            
-            var x=xmlDoc.getElementsByTagName("speaker");
+            var x=document.getElementsByTagName("speaker");
             for (i=0;i<x.length;i++)
             { 
                 document.write("<div data-role=\"page\" id=\"");
@@ -791,28 +648,8 @@
         <!--SUBJECTS---------------------------------------------------------->
         
         <script type="text/javascript">
-            if (window.XMLHttpRequest)
-            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {// code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
             
-            var randomItem=new Date();
-            var url = "http://devmobile.se/wp-content/uploads/2012/05/subjects.xml";
-            url=url+'?random='+randomItem.getUTCMilliseconds();
-            
-            xmlhttp.open("GET",url,false);
-            xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                showAlert();
-                
-                window.location.reload();}
-            
-            xmlDoc=xmlhttp.responseXML; 
-            
-            var x=xmlDoc.getElementsByTagName("subject");
+            var x=document.getElementsByTagName("subject");
             for (i=0;i<x.length;i++)
             { 
                 document.write("<div data-role=\"page\" id=\"");
@@ -849,27 +686,8 @@
         <!--SPONSORS---------------------------------------------------------->
         
         <script type="text/javascript">
-            if (window.XMLHttpRequest)
-            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {// code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
             
-            var randomItem=new Date();
-            var url = "http://devmobile.se/wp-content/uploads/2012/05/sponsors.xml";
-            url=url+'?random='+randomItem.getUTCMilliseconds();
-            
-            xmlhttp.open("GET",url,false);
-            xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                showAlert();
-                
-                window.location.reload();}
-            xmlDoc=xmlhttp.responseXML; 
-            
-            var x=xmlDoc.getElementsByTagName("sponsor");
+            var x=document.getElementsByTagName("sponsor");
             for (i=0;i<x.length;i++)
             { 
                 document.write("<div data-role=\"page\" id=\"");
@@ -902,27 +720,8 @@
         
         <!--CONTRIBUTORS---------------------------------------------------------->
         <script type="text/javascript">
-            if (window.XMLHttpRequest)
-            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {// code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
             
-            var randomItem=new Date();
-            var url = "http://devmobile.se/wp-content/uploads/2012/05/contributors.xml";
-            url=url+'?random='+randomItem.getUTCMilliseconds();
-            
-            xmlhttp.open("GET",url,false);
-            xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                showAlert();
-                
-                window.location.reload();}
-            xmlDoc=xmlhttp.responseXML; 
-            
-            var x=xmlDoc.getElementsByTagName("contributor");
+            var x=document.getElementsByTagName("contributor");
             for (i=0;i<x.length;i++)
             { 
                 document.write("<div data-role=\"page\" id=\"");
@@ -960,6 +759,7 @@
                 
                 document.write("<div data-role=\"content\">");
                 document.write(x[i].getElementsByTagName("info")[0].childNodes[0].nodeValue);
+                //alert(x[i].getElementsByTagName("info")[0].length);
                 document.write("</div> <!-- end content -->");
                 
                 document.write("</div> <!-- end page -->");
@@ -1016,27 +816,8 @@
                         <div class="ui-bar ui-bar-d" >13.00&ndash;14.00<br />                    
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "sal"){
@@ -1060,27 +841,8 @@
                         <div class="ui-bar ui-bar-d" >14.10&ndash;15.00<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "sal"){
@@ -1113,27 +875,8 @@
                         <div class="ui-bar ui-bar-d" >15.30&ndash;16.20<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "sal"){
@@ -1156,27 +899,8 @@
                             
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "sal"){
@@ -1209,27 +933,8 @@
                         
                         <div class="ui-bar ui-bar-d" >17.50&ndash;18.40<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "sal"){
@@ -1251,27 +956,8 @@
                         <div class="ui-bar ui-bar-d" >18.50&ndash;19.40<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "sal"){
@@ -1358,27 +1044,8 @@
                         
                         <div class="ui-bar ui-bar-d" >13.00&ndash;14.00<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "ell"){
@@ -1401,27 +1068,8 @@
                         <div class="ui-bar ui-bar-d" >14.10&ndash;15.00<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "ell"){
@@ -1454,27 +1102,8 @@
                         <div class="ui-bar ui-bar-d" >15.30&ndash;16.20<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "ell"){
@@ -1496,27 +1125,8 @@
                         <div class="ui-bar ui-bar-d" >16.30&ndash;17.20<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "ell"){
@@ -1549,27 +1159,8 @@
                         <div class="ui-bar ui-bar-d" >17.50&ndash;18.40<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "ell"){
@@ -1591,27 +1182,8 @@
                         <div class="ui-bar ui-bar-d" >18.50&ndash;19.40<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "ell"){
@@ -1705,27 +1277,8 @@
                         <div class="ui-bar ui-bar-d" >13.00&ndash;14.00<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "bra"){
@@ -1747,27 +1300,8 @@
                         <div class="ui-bar ui-bar-d" >14.10&ndash;15.00<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "bra"){
@@ -1800,27 +1334,8 @@
                         <div class="ui-bar ui-bar-d" >15.30&ndash;16.20<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "bra"){
@@ -1842,27 +1357,8 @@
                         <div class="ui-bar ui-bar-d" >16.30&ndash;17.20<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "bra"){
@@ -1895,27 +1391,8 @@
                         <div class="ui-bar ui-bar-d" >17.50&ndash;18.40<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "bra"){
@@ -1937,27 +1414,8 @@
                         <div class="ui-bar ui-bar-d" >18.50&ndash;19.40<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "bra"){
@@ -2051,27 +1509,8 @@
                         <div class="ui-bar ui-bar-d" >13.00&ndash;14.00<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "asp"){
@@ -2094,27 +1533,8 @@
                         
                         <div class="ui-bar ui-bar-d" >14.10&ndash;15.00<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "asp"){
@@ -2147,27 +1567,8 @@
                         
                         <div class="ui-bar ui-bar-d" >15.30&ndash;16.20<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "asp"){
@@ -2189,27 +1590,8 @@
                         
                         <div class="ui-bar ui-bar-d" >16.30&ndash;17.20<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "asp"){
@@ -2242,27 +1624,8 @@
                         
                         <div class="ui-bar ui-bar-d" >17.50&ndash;18.40<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "asp"){
@@ -2285,27 +1648,8 @@
                         <div class="ui-bar ui-bar-d" >18.50&ndash;19.40<br />
                             
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "asp"){
@@ -2399,27 +1743,8 @@
                         
                         <div class="ui-bar ui-bar-d" >13.00&ndash;14.00<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "kon"){
@@ -2441,27 +1766,8 @@
                     <div class="ui-block-b" style="width:100%">
                         
                         <div class="ui-bar ui-bar-d" >14.10&ndash;15.00<br /> <script type="text/javascript">
-                            if (window.XMLHttpRequest)
-                            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                xmlhttp=new XMLHttpRequest();
-                            }
-                            else
-                            {// code for IE6, IE5
-                                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                            }
                             
-                            var randomItem=new Date();
-                            var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                            url=url+'?random='+randomItem.getUTCMilliseconds();
-                            
-                            xmlhttp.open("GET",url,false);
-                            xmlhttp.send(); if(xmlhttp.responseXML == null){                                                    $.mobile.changePage("#home", {transition: "none"});
-                                showAlert();
-                                
-                                window.location.reload();}
-                            xmlDoc=xmlhttp.responseXML; 
-                            
-                            var y=xmlDoc.getElementsByTagName("room");
+                            var y=document.getElementsByTagName("room");
                             for (i=0;i<y.length;i++)
                             { 
                                 if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "kon"){
@@ -2492,27 +1798,8 @@
                         
                         <div class="ui-bar ui-bar-d" >15.30&ndash;16.20<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "kon"){
@@ -2533,27 +1820,8 @@
                         
                         <div class="ui-bar ui-bar-d" >16.30&ndash;17.20<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "kon"){
@@ -2585,27 +1853,8 @@
                         
                         <div class="ui-bar ui-bar-d" >17.50&ndash;18.40<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "kon"){
@@ -2626,27 +1875,8 @@
                         
                         <div class="ui-bar ui-bar-d" >18.50&ndash;19.40<br />
                             <script type="text/javascript">
-                                if (window.XMLHttpRequest)
-                                {// code for IE7+, Firefox, Chrome, Opera, Safari
-                                    xmlhttp=new XMLHttpRequest();
-                                }
-                                else
-                                {// code for IE6, IE5
-                                    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-                                }
                                 
-                                var randomItem=new Date();
-                                var url = "http://devmobile.se/wp-content/uploads/2012/05/agenda.xml";
-                                url=url+'?random='+randomItem.getUTCMilliseconds();
-                                
-                                xmlhttp.open("GET",url,false);
-                                xmlhttp.send(); if(xmlhttp.responseXML == null){                                                $.mobile.changePage("#home", {transition: "none"});
-                                    showAlert();
-                                    
-                                    window.location.reload();}
-                                xmlDoc=xmlhttp.responseXML; 
-                                
-                                var y=xmlDoc.getElementsByTagName("room");
+                                var y=document.getElementsByTagName("room");
                                 for (i=0;i<y.length;i++)
                                 { 
                                     if(y[i].getElementsByTagName("id")[0].childNodes[0].nodeValue == "kon"){
